@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.qiuyeqaq.gtlcore_ceu.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "gtlcore_ceu.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
