@@ -1,4 +1,4 @@
-package api.registries;
+package org.qiuyeqaq.gtlcore_ceu.api.registries;
 
 import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
 

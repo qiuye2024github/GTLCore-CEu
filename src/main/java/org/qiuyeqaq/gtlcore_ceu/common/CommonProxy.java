@@ -1,4 +1,4 @@
-package common;
+package org.qiuyeqaq.gtlcore_ceu.common;
 
 import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
 
@@ -11,7 +11,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-import static api.registries.GTLCEuRegistration.REGISTRATE;
+import static org.qiuyeqaq.gtlcore_ceu.api.registries.GTLCEuRegistration.REGISTRATE;
 
 public class CommonProxy {
 

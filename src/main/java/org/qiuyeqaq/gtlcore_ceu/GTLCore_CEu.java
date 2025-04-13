@@ -8,9 +8,9 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 
-import client.ClientProxy;
+import org.qiuyeqaq.gtlcore_ceu.client.ClientProxy;
 import com.mojang.logging.LogUtils;
-import common.CommonProxy;
+import org.qiuyeqaq.gtlcore_ceu.common.CommonProxy;
 import org.slf4j.Logger;
 
 import java.util.Objects;
