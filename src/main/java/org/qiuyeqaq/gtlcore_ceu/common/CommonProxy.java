@@ -10,6 +10,7 @@ import com.gregtechceu.gtceu.config.ConfigHolder;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuCreativeModeTabs;
 
 import static org.qiuyeqaq.gtlcore_ceu.api.registries.GTLCEuRegistration.REGISTRATE;
 
@@ -25,6 +26,7 @@ public class CommonProxy {
     }
 
     public static void init() {
+        GTLCEuCreativeModeTabs.init();
         ConfigHolder.init();
     }
 
