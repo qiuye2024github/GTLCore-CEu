@@ -1,12 +1,14 @@
 package org.qiuyeqaq.gtlcore_ceu.integration.ae2.storage;
 
-import appeng.api.storage.cells.ICellHandler;
-import appeng.api.storage.cells.ISaveProvider;
+import org.qiuyeqaq.gtlcore_ceu.integration.ae2.InfinityCell;
+import org.qiuyeqaq.gtlcore_ceu.utils.NumberUtils;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
-import org.qiuyeqaq.gtlcore_ceu.integration.ae2.InfinityCell;
-import org.qiuyeqaq.gtlcore_ceu.utils.NumberUtils;
+
+import appeng.api.storage.cells.ICellHandler;
+import appeng.api.storage.cells.ISaveProvider;
 
 import java.util.List;
 

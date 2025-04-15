@@ -1,5 +1,10 @@
 package org.qiuyeqaq.gtlcore_ceu.mixin.emi;
 
+import org.qiuyeqaq.gtlcore_ceu.integration.emi.multipage.CustomModularEmiRecipe;
+
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.network.chat.Component;
+
 import dev.emi.emi.api.EmiApi;
 import dev.emi.emi.api.widget.Bounds;
 import dev.emi.emi.api.widget.Widget;
@@ -8,9 +13,6 @@ import dev.emi.emi.config.SidebarSide;
 import dev.emi.emi.screen.RecipeScreen;
 import dev.emi.emi.screen.RecipeTab;
 import dev.emi.emi.screen.WidgetGroup;
-import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.network.chat.Component;
-import org.qiuyeqaq.gtlcore_ceu.integration.emi.multipage.CustomModularEmiRecipe;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
@@ -85,6 +87,17 @@ public abstract class RecipeScreenMixin extends Screen {
         }
     }
 
+    /**
+     * 获取工作站的边界。
+     *
+     * @param i 工作站的索引，如果为 -1，则默认为 0。
+     * @return 根据配置和索引返回工作站的边界。
+     *
+     * @author .
+     * @qiuyeqaq .
+     *
+     * @reason 修复获取工作站边界时的偏移量计算错误
+     */
     @Overwrite(remap = false)
     public Bounds getWorkstationBounds(int i) {
         Bounds bounds = Bounds.EMPTY;
@@ -103,6 +116,18 @@ public abstract class RecipeScreenMixin extends Screen {
         return bounds;
     }
 
+    /**
+     * 返回允许的最大工作台数量。
+     * 该方法被重写以返回Integer.MAX_VALUE，表示理论上允许的最大数量。
+     *
+     * @return 允许的最大工作台数量
+     *
+     * @author .
+     * @qiuyeqaq .
+     *
+     * @reason 我们需要返回理论上允许的最大工作台数量，因此重写了这个方法
+     *
+     */
     @Overwrite(remap = false)
     public int getMaxWorkstations() {
         return Integer.MAX_VALUE;

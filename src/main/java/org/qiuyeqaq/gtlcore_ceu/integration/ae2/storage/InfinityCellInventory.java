@@ -1,5 +1,13 @@
 package org.qiuyeqaq.gtlcore_ceu.integration.ae2.storage;
 
+import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
+import org.qiuyeqaq.gtlcore_ceu.integration.ae2.InfinityCell;
+import org.qiuyeqaq.gtlcore_ceu.utils.StorageManager;
+
+import net.minecraft.nbt.ListTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.ItemStack;
+
 import appeng.api.config.Actionable;
 import appeng.api.networking.security.IActionSource;
 import appeng.api.stacks.AEItemKey;
@@ -14,12 +22,6 @@ import it.unimi.dsi.fastutil.longs.LongArrayList;
 import it.unimi.dsi.fastutil.objects.Object2LongMap;
 import it.unimi.dsi.fastutil.objects.Object2LongOpenHashMap;
 import lombok.Getter;
-import net.minecraft.nbt.ListTag;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.ItemStack;
-import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
-import org.qiuyeqaq.gtlcore_ceu.integration.ae2.InfinityCell;
-import org.qiuyeqaq.gtlcore_ceu.utils.StorageManager;
 
 import java.util.Objects;
 import java.util.UUID;

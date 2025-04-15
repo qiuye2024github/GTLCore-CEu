@@ -1,5 +1,14 @@
 package org.qiuyeqaq.gtlcore_ceu.integration.ae2;
 
+import org.qiuyeqaq.gtlcore_ceu.integration.ae2.storage.InfinityCellHandler;
+
+import net.minecraft.MethodsReturnNonnullByDefault;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.Level;
+
 import appeng.api.config.FuzzyMode;
 import appeng.api.stacks.AEKeyType;
 import appeng.api.storage.cells.ICellWorkbenchItem;
@@ -8,17 +17,11 @@ import appeng.api.upgrades.UpgradeInventories;
 import appeng.hooks.AEToolItem;
 import com.google.common.base.Preconditions;
 import lombok.Getter;
-import net.minecraft.MethodsReturnNonnullByDefault;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.Level;
-import org.qiuyeqaq.gtlcore_ceu.integration.ae2.storage.InfinityCellHandler;
+
+import java.util.List;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.List;
 
 @Getter
 @ParametersAreNonnullByDefault

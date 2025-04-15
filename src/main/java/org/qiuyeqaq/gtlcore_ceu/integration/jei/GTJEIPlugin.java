@@ -1,13 +1,14 @@
 package org.qiuyeqaq.gtlcore_ceu.integration.jei;
 
+import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
+
+import net.minecraft.resources.ResourceLocation;
+
 import com.lowdragmc.lowdraglib.LDLib;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
-import mezz.jei.api.constants.RecipeTypes;
 import mezz.jei.api.registration.IRecipeCatalystRegistration;
-import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
-import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
 
 @JeiPlugin
 public class GTJEIPlugin implements IModPlugin {

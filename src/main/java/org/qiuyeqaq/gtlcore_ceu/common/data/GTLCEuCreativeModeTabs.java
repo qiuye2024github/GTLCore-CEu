@@ -1,7 +1,6 @@
 package org.qiuyeqaq.gtlcore_ceu.common.data;
 
 import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
-import org.qiuyeqaq.gtlcore_ceu.common.item.GTLCEuItems;
 
 import com.gregtechceu.gtceu.common.data.GTCreativeModeTabs;
 

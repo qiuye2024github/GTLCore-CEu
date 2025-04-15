@@ -1,15 +1,15 @@
 package org.qiuyeqaq.gtlcore_ceu.integration.ae2;
 
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.entity.BlockEntity;
+
 import appeng.api.implementations.blockentities.IChestOrDrive;
 import appeng.api.storage.cells.ICellGuiHandler;
 import appeng.api.storage.cells.ICellHandler;
 import appeng.menu.MenuOpener;
 import appeng.menu.locator.MenuLocators;
 import appeng.menu.me.common.MEStorageMenu;
-import com.glodblock.github.extendedae.common.items.InfinityCell;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.entity.BlockEntity;
 
 public class InfinityCellGuiHandler implements ICellGuiHandler {
 

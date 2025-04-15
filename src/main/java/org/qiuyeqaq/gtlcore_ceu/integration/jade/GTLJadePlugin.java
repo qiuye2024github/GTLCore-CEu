@@ -1,8 +1,10 @@
 package org.qiuyeqaq.gtlcore_ceu.integration.jade;
 
+import org.qiuyeqaq.gtlcore_ceu.integration.jade.provider.WirelessOpticalDataHatchProvide;
+
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import org.qiuyeqaq.gtlcore_ceu.integration.jade.provider.WirelessOpticalDataHatchProvide;
+
 import snownee.jade.api.IWailaClientRegistration;
 import snownee.jade.api.IWailaCommonRegistration;
 import snownee.jade.api.IWailaPlugin;

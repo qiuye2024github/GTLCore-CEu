@@ -1,13 +1,15 @@
 package org.qiuyeqaq.gtlcore_ceu.mixin.gtmt;
 
+import org.qiuyeqaq.gtlcore_ceu.common.machine.multiblock.part.NeutronAcceleratorPartMachine;
 
 import com.gregtechceu.gtceu.api.capability.ICoverable;
 import com.gregtechceu.gtceu.api.cover.CoverBehavior;
 import com.gregtechceu.gtceu.api.cover.CoverDefinition;
 import com.gregtechceu.gtceu.api.machine.MetaMachine;
-import com.hepdd.gtmthings.common.cover.WirelessEnergyReceiveCover;
+
 import net.minecraft.core.Direction;
-import org.qiuyeqaq.gtlcore_ceu.common.machine.multiblock.part.NeutronAcceleratorPartMachine;
+
+import com.hepdd.gtmthings.common.cover.WirelessEnergyReceiveCover;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;

@@ -1,5 +1,7 @@
 package org.qiuyeqaq.gtlcore_ceu.utils;
 
+import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
+
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -9,9 +11,9 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.registries.ForgeRegistries;
-import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
 
 public class Registries {
+
     public static Item getItem(String s) {
         Item i = ForgeRegistries.ITEMS.getValue(new ResourceLocation(s));
         if (i == Items.AIR) {

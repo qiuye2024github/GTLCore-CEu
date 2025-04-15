@@ -1,7 +1,5 @@
 package org.qiuyeqaq.gtlcore_ceu;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.qiuyeqaq.gtlcore_ceu.client.ClientProxy;
 import org.qiuyeqaq.gtlcore_ceu.common.CommonProxy;
 import org.qiuyeqaq.gtlcore_ceu.utils.StorageManager;
@@ -12,7 +10,8 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 
-import com.mojang.logging.LogUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.Objects;
 

@@ -1,8 +1,9 @@
 package org.qiuyeqaq.gtlcore_ceu.utils;
 
-import com.google.common.math.LongMath;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+
+import com.google.common.math.LongMath;
 
 import java.text.DecimalFormat;
 

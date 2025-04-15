@@ -1,18 +1,17 @@
 package org.qiuyeqaq.gtlcore_ceu.forge;
 
-import dev.latvian.mods.kubejs.KubeJS;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.registries.MissingMappingsEvent;
 import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
 
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.entity.monster.EnderMan;
 import net.minecraft.world.entity.monster.Shulker;
 import net.minecraftforge.event.entity.EntityTeleportEvent;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import org.qiuyeqaq.gtlcore_ceu.common.item.GTLCEuItems;
+import net.minecraftforge.registries.MissingMappingsEvent;
+
+import dev.latvian.mods.kubejs.KubeJS;
 
 @Mod.EventBusSubscriber(modid = GTLCore_CEu.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ForgeCommonEventListener {
@@ -36,9 +35,7 @@ public class ForgeCommonEventListener {
 
     @SubscribeEvent
     public static void remapIds(MissingMappingsEvent event) {
-        event.getMappings(Registries.BLOCK, KubeJS.MOD_ID).forEach(mapping -> {
-        });
-        event.getMappings(Registries.ITEM, "infinitycells").forEach(mapping -> {
-        });
+        event.getMappings(Registries.BLOCK, KubeJS.MOD_ID).forEach(mapping -> {});
+        event.getMappings(Registries.ITEM, "infinitycells").forEach(mapping -> {});
     }
 }
