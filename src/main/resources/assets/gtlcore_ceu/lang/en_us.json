@@ -1,3 +1,11 @@
 {
-  "config.jade.plugin_gtlcore_ceu.wireless_data_hatch_provider": "[GTL] 无线光学"
+  "item.gtlcore_ceu.mega_max_battery": "兆·终极电池",
+  "config.jade.plugin_gtlcore_ceu.wireless_data_hatch_provider": "[GTL] 无线光学",
+  "item.gtlcore_ceu.structure_detect.tooltip.0": "潜行右键多方快结构主方块即可",
+  "item.gtlcore_ceu.structure_detect.tooltip.1": "检测大型结构时可能会出现卡顿",
+  "item.gtlcore_ceu.structure_detect.error.0": "在 %s 处需要:",
+  "item.gtlcore_ceu.structure_detect.error.1": "在 %s 处的",
+  "item.gtlcore_ceu.structure_detect.error.2": "[%s, %s, %s]-(%s)",
+  "item.gtlcore_ceu.structure_detect.error.3": "翻转坐标",
+  "item.gtlcore_ceu.structure_detect.error.4": "正常坐标"
 }

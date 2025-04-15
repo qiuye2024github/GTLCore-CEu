@@ -1,24 +1,23 @@
 package org.qiuyeqaq.gtlcore_ceu.api.item.tool.ae2.patternTool;
 
-import appeng.api.crafting.PatternDetailsHelper;
-import appeng.api.stacks.GenericStack;
-import appeng.crafting.pattern.AEProcessingPattern;
+import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
+import org.qiuyeqaq.gtlcore_ceu.utils.Registries;
+
 import com.gregtechceu.gtceu.common.data.GTItems;
-import com.tterrag.registrate.util.entry.ItemEntry;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.ListTag;
+
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
+
+import appeng.api.crafting.PatternDetailsHelper;
+import appeng.api.stacks.GenericStack;
+import appeng.crafting.pattern.AEProcessingPattern;
+import com.tterrag.registrate.util.entry.ItemEntry;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-
-import com.google.gson.reflect.TypeToken;
-import org.qiuyeqaq.gtlcore_ceu.utils.Registries;
 
 public class Ae2BaseProcessingPattern {
 

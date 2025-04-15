@@ -2,9 +2,13 @@ package org.qiuyeqaq.gtlcore_ceu;
 
 import org.qiuyeqaq.gtlcore_ceu.api.registries.GTLCEuRegistration;
 import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuBedrockFluids;
+import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuItems;
 
 import com.gregtechceu.gtceu.api.addon.IGTAddon;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
+import com.gregtechceu.gtceu.data.recipe.misc.CircuitRecipes;
+import com.gregtechceu.gtceu.data.recipe.misc.FuelRecipes;
+import com.gregtechceu.gtceu.data.recipe.serialized.chemistry.MixerRecipes;
 
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.resources.ResourceLocation;
@@ -31,13 +35,28 @@ public class GTLCEuAddon implements IGTAddon {
     }
 
     @Override
-    public void initializeAddon() {}
+    public void initializeAddon() {
+        GTLCEuItems.init();
+    }
 
     @Override
     public void registerSounds() {}
 
     @Override
-    public void addRecipes(Consumer<FinishedRecipe> provider) {}
+    public void registerCovers() {}
+
+    @Override
+    public void registerElements() {}
+
+    @Override
+    public void registerTagPrefixes() {}
+
+    @Override
+    public void addRecipes(Consumer<FinishedRecipe> provider) {
+        FuelRecipes.init(provider);
+        CircuitRecipes.init(provider);
+        MixerRecipes.init(provider);
+    }
 
     @Override
     public void removeRecipes(Consumer<ResourceLocation> consumer) {}

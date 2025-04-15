@@ -11,21 +11,21 @@ description='''${mod_description}'''
 
 [[dependencies.${mod_id}]]
 modId = "gtceu"
-mandatory = false
-versionRange = "[1,)"
-ordering = "BEFORE"
-side = "BOTH"
-
-[[dependencies.${mod_id}]]
-modId = "ad_astra"
-mandatory = false
-versionRange = "[1,)"
+mandatory = true
+versionRange = "[gtceu_version,)"
 ordering = "AFTER"
 side = "BOTH"
 
 [[dependencies.${mod_id}]]
-modId = "deeperdarker"
+modId = "gtmthings"
+mandatory = true
+versionRange = "[1.3,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "extendedae"
 mandatory = false
-versionRange = "[1,)"
+versionRange = "[1.1,)"
 ordering = "AFTER"
 side = "BOTH"

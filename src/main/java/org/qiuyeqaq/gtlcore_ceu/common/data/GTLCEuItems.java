@@ -1,24 +1,24 @@
-package org.qiuyeqaq.gtlcore_ceu.common.data;
+package org.qiuyeqaq.gtlcore_ceu.common.item;
 
-import org.qiuyeqaq.gtlcore_ceu.utils.TextUtil;
-
+import appeng.core.localization.GuiText;
 import com.gregtechceu.gtceu.GTCEu;
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.item.ComponentItem;
 import com.gregtechceu.gtceu.api.item.component.ElectricStats;
 import com.gregtechceu.gtceu.common.item.TooltipBehavior;
-
-import net.minecraft.network.chat.Component;
-
-import appeng.core.localization.GuiText;
 import com.tterrag.registrate.util.entry.ItemEntry;
+import net.minecraft.network.chat.Component;
+import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuCreativeModeTabs;
+import org.qiuyeqaq.gtlcore_ceu.utils.TextUtil;
 
-import static com.gregtechceu.gtceu.common.data.GTItems.*;
+import static com.gregtechceu.gtceu.common.data.GTItems.attach;
+import static com.gregtechceu.gtceu.common.data.GTItems.modelPredicate;
 import static org.qiuyeqaq.gtlcore_ceu.api.registries.GTLCEuRegistration.REGISTRATE;
 
 public class GTLCEuItems {
 
-    public static void init() {}
+    public static void init() {
+    }
 
     static {
         REGISTRATE.creativeModeTab(() -> GTLCEuCreativeModeTabs.GTL_CORE_CEU);

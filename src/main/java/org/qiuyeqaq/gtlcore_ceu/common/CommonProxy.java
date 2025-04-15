@@ -1,17 +1,15 @@
 package org.qiuyeqaq.gtlcore_ceu.common;
 
-import appeng.api.storage.StorageCells;
-import appeng.core.AELog;
-import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialEvent;
-import com.gregtechceu.gtceu.api.machine.MachineDefinition;
-import com.gregtechceu.gtceu.api.recipe.GTRecipeType;
-import com.gregtechceu.gtceu.api.recipe.condition.RecipeConditionType;
 import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
 import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuCreativeModeTabs;
-import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuItems;
+
+import org.qiuyeqaq.gtlcore_ceu.common.item.GTLCEuItems;
 import org.qiuyeqaq.gtlcore_ceu.config.ConfigHolder;
+import org.qiuyeqaq.gtlcore_ceu.integration.ae2.InfinityCellGuiHandler;
+import org.qiuyeqaq.gtlcore_ceu.integration.ae2.storage.InfinityCellHandler;
 
 import com.gregtechceu.gtceu.api.GTCEuAPI;
+import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialEvent;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialRegistryEvent;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.PostMaterialEvent;
 
@@ -19,8 +17,9 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.qiuyeqaq.gtlcore_ceu.integration.ae2.InfinityCellGuiHandler;
-import org.qiuyeqaq.gtlcore_ceu.integration.ae2.storage.InfinityCellHandler;
+
+import appeng.api.storage.StorageCells;
+import appeng.core.AELog;
 
 import static org.qiuyeqaq.gtlcore_ceu.api.registries.GTLCEuRegistration.REGISTRATE;
 

@@ -9,6 +9,7 @@ import com.gregtechceu.gtceu.api.machine.SimpleTieredMachine;
 import com.gregtechceu.gtceu.api.machine.trait.NotifiableItemStackHandler;
 import com.gregtechceu.gtceu.common.item.IntCircuitBehaviour;
 import com.gregtechceu.gtceu.common.machine.multiblock.part.ItemBusPartMachine;
+
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -20,7 +21,7 @@ import java.util.Objects;
 
 import static com.gregtechceu.gtceu.api.item.tool.ToolHelper.getBehaviorsTag;
 
-public class ConfigurationCopyBehavior  implements IToolBehavior, IInteractionItem {
+public class ConfigurationCopyBehavior implements IToolBehavior, IInteractionItem {
 
     public static final ConfigurationCopyBehavior INSTANCE = new ConfigurationCopyBehavior();
 

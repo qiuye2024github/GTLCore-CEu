@@ -1,15 +1,17 @@
 package org.qiuyeqaq.gtlcore_ceu.api.item.tool.ae2.patternTool;
 
+import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
+
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+
 import appeng.api.crafting.PatternDetailsHelper;
 import appeng.api.stacks.AEItemKey;
 import appeng.api.stacks.AEKeyType;
 import appeng.api.stacks.GenericStack;
 import appeng.crafting.pattern.AEProcessingPattern;
 import appeng.crafting.pattern.EncodedPatternItem;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
 
 import java.util.ArrayList;
 import java.util.Arrays;
