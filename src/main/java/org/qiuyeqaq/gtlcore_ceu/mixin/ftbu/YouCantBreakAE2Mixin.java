@@ -1,12 +1,17 @@
 package org.qiuyeqaq.gtlcore_ceu.mixin.ftbu;
 
-import dev.ftb.mods.ftbultimine.FTBUltiminePlayerData;
-import dev.ftb.mods.ftbultimine.shape.BlockMatcher;
+import committee.nova.mods.avaritia.api.utils.ItemUtils;
+import net.minecraft.world.item.Item;
 import org.qiuyeqaq.gtlcore_ceu.config.ConfigHolder;
 import org.qiuyeqaq.gtlcore_ceu.utils.TextUtil;
+
+import dev.ftb.mods.ftbultimine.FTBUltiminePlayerData;
+import dev.ftb.mods.ftbultimine.shape.BlockMatcher;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
+
+import java.util.UUID;
 
 @Mixin(FTBUltiminePlayerData.class)
 public class YouCantBreakAE2Mixin {
@@ -17,7 +22,8 @@ public class YouCantBreakAE2Mixin {
             return matcher;
         }
         return (original, state) -> {
-            boolean flag = !TextUtil.containsWithWildcard(ConfigHolder.INSTANCE.blackBlockList, state.getBlock().toString());
+            boolean flag = !TextUtil.containsWithWildcard(ConfigHolder.INSTANCE.blackBlockList,
+                    ItemUtils.getId(Item.byBlock(state.getBlock())));
             return flag && state.getBlock() == original.getBlock();
         };
     }

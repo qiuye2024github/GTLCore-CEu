@@ -1,5 +1,7 @@
 package org.qiuyeqaq.gtlcore_ceu;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.qiuyeqaq.gtlcore_ceu.client.ClientProxy;
 import org.qiuyeqaq.gtlcore_ceu.common.CommonProxy;
 import org.qiuyeqaq.gtlcore_ceu.utils.StorageManager;
@@ -11,7 +13,6 @@ import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 
 import com.mojang.logging.LogUtils;
-import org.slf4j.Logger;
 
 import java.util.Objects;
 
@@ -19,7 +20,7 @@ import java.util.Objects;
 public class GTLCore_CEu {
 
     public static final String MOD_ID = "gtlcore_ceu";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
     public static final String VERSION = "0.0.1";
     public static StorageManager STORAGE_INSTANCE = new StorageManager();
 

@@ -1,5 +1,7 @@
 package org.qiuyeqaq.gtlcore_ceu.common.item;
 
+import appeng.api.stacks.AEKeyType;
+import com.glodblock.github.extendedae.common.items.InfinityCell;
 import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuCreativeModeTabs;
 import org.qiuyeqaq.gtlcore_ceu.utils.TextUtil;
 
