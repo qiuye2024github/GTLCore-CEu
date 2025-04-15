@@ -5,9 +5,13 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "gtlcore_ceu.refmap.json",
   "mixins": [
-    "ftbu.YouCantBreakAE2Mixin"
+    "ftbu.YouCantBreakAE2Mixin",
+    "gtmt.HugeBusPartMachineMixin",
+    "gtmt.WirelessEnergyReceiveCoverMixin",
+    "ldlib.ItemStackTransferMixin",
   ],
   "client": [
+    "ldlib.CustomBakedModelFixed"
   ],
   "injectors": {
     "defaultRequire": 1,
