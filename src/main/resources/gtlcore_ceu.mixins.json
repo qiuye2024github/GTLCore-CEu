@@ -18,6 +18,7 @@
     "travelanchors.EventListenerMixin"
   ],
   "client": [
+    "emi.RecipeScreenMixin",
     "ldlib.CustomBakedModelFixed"
   ],
   "injectors": {
