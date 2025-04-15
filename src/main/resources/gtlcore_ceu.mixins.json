@@ -5,10 +5,17 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "gtlcore_ceu.refmap.json",
   "mixins": [
+    "adastra.ModUtilsMixin",
+    "adastra.RocketMixin",
+    "adastra.VehicleItemMixin",
+    "extendedae.ContainerPatternModifierMixin",
+    "extendedae.PartExPatternProviderMixin",
+    "extendedae.TileExPatternProviderMixin",
     "ftbu.YouCantBreakAE2Mixin",
     "gtmt.HugeBusPartMachineMixin",
     "gtmt.WirelessEnergyReceiveCoverMixin",
     "ldlib.ItemStackTransferMixin",
+    "travelanchors.EventListenerMixin"
   ],
   "client": [
     "ldlib.CustomBakedModelFixed"

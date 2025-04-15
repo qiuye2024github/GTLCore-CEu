@@ -43,7 +43,8 @@ dependencies {
 
     modImplementation("curse.maven:re-avaritia-623969:6264467")
 
-    modCompileOnly("curse.maven:libx-412525:5207625")
+    modImplementation("org.moddingx:LibX:1.20.1-5.0.14")
+    modImplementation("dev:TravelAnchors-1.20.1-5.0.1")
     modCompileOnly("curse.maven:mythicbotany-400058:5101899")
 
     // ftb-chunk
