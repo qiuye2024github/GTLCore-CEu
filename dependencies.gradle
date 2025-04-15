@@ -31,6 +31,9 @@ dependencies {
 
     modImplementation("dev.shadowsoffire:Placebo:${project.minecraft_version}-8.6.2")
 
+    modImplementation("dev.latvian.mods:kubejs-forge:${kubejs_version}")
+    modImplementation("dev.latvian.mods:rhino-forge:${rhino_version}")
+
     modImplementation("curse.maven:jade-324717:6106101")
 
     modImplementation("curse.maven:glodium-957920:5006780")
@@ -48,7 +51,7 @@ dependencies {
     modRuntimeOnly("dev.ftb.mods:ftb-library-forge:2001.2.9"){ transitive = false }
     modRuntimeOnly("dev.ftb.mods:ftb-teams-forge:2001.3.1"){ transitive = false }
 
-    modCompileOnly("dev.ftb.mods:ftb-ultimine-forge:2001.1.5") { transitive false }
+    modImplementation("dev.ftb.mods:ftb-ultimine-forge:2001.1.5") { transitive false }
 
     modCompileOnly("software.bernie.geckolib:geckolib-forge-${minecraft_version}:4.7.1.2")
 

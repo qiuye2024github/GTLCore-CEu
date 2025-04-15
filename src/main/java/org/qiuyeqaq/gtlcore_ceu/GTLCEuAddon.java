@@ -1,12 +1,15 @@
 package org.qiuyeqaq.gtlcore_ceu;
 
-import com.gregtechceu.gtceu.api.addon.IGTAddon;
-import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
-import com.lowdragmc.lowdraglib.Platform;
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.resources.ResourceLocation;
 import org.qiuyeqaq.gtlcore_ceu.api.registries.GTLCEuRegistration;
 import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuBedrockFluids;
+
+import com.gregtechceu.gtceu.api.addon.IGTAddon;
+import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
+
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.resources.ResourceLocation;
+
+import com.lowdragmc.lowdraglib.Platform;
 
 import java.util.function.Consumer;
 

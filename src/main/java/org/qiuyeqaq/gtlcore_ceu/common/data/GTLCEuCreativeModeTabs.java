@@ -1,10 +1,13 @@
 package org.qiuyeqaq.gtlcore_ceu.common.data;
 
-import com.gregtechceu.gtceu.common.data.GTCreativeModeTabs;
-import com.tterrag.registrate.util.entry.RegistryEntry;
-import net.minecraft.world.item.CreativeModeTab;
 import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
 import org.qiuyeqaq.gtlcore_ceu.common.item.GTLCEuItems;
+
+import com.gregtechceu.gtceu.common.data.GTCreativeModeTabs;
+
+import net.minecraft.world.item.CreativeModeTab;
+
+import com.tterrag.registrate.util.entry.RegistryEntry;
 
 import static org.qiuyeqaq.gtlcore_ceu.api.registries.GTLCEuRegistration.REGISTRATE;
 

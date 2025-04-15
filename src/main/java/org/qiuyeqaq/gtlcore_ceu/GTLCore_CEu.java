@@ -1,5 +1,7 @@
 package org.qiuyeqaq.gtlcore_ceu;
 
+import org.qiuyeqaq.gtlcore_ceu.client.ClientProxy;
+import org.qiuyeqaq.gtlcore_ceu.common.CommonProxy;
 import org.qiuyeqaq.gtlcore_ceu.utils.StorageManager;
 
 import net.minecraft.resources.ResourceLocation;
@@ -8,9 +10,7 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 
-import org.qiuyeqaq.gtlcore_ceu.client.ClientProxy;
 import com.mojang.logging.LogUtils;
-import org.qiuyeqaq.gtlcore_ceu.common.CommonProxy;
 import org.slf4j.Logger;
 
 import java.util.Objects;

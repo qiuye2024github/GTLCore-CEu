@@ -1,14 +1,18 @@
 package org.qiuyeqaq.gtlcore_ceu.common.item;
 
+import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuCreativeModeTabs;
+import org.qiuyeqaq.gtlcore_ceu.utils.TextUtil;
+
 import com.gregtechceu.gtceu.GTCEu;
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.item.ComponentItem;
 import com.gregtechceu.gtceu.api.item.component.ElectricStats;
 import com.gregtechceu.gtceu.common.item.TooltipBehavior;
-import com.tterrag.registrate.util.entry.ItemEntry;
+
 import net.minecraft.network.chat.Component;
-import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuCreativeModeTabs;
-import org.qiuyeqaq.gtlcore_ceu.utils.TextUtil;
+
+import appeng.core.localization.GuiText;
+import com.tterrag.registrate.util.entry.ItemEntry;
 
 import static com.gregtechceu.gtceu.common.data.GTItems.*;
 import static org.qiuyeqaq.gtlcore_ceu.api.registries.GTLCEuRegistration.REGISTRATE;
@@ -29,4 +33,9 @@ public class GTLCEuItems {
             .onRegister(modelPredicate(GTCEu.id("battery"), ElectricStats::getStoredPredicate))
             .onRegister(attach(ElectricStats.createRechargeableBattery(Long.MAX_VALUE, GTValues.MAX)))
             .register();
+
+    public static void InitUpgrades() {
+        String storageCellGroup = GuiText.StorageCells.getTranslationKey();
+        String portableCellGroup = GuiText.PortableCells.getTranslationKey();
+    }
 }
