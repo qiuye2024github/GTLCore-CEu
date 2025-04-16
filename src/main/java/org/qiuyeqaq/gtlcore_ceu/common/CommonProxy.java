@@ -1,9 +1,7 @@
 package org.qiuyeqaq.gtlcore_ceu.common;
 
 import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
-import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuCreativeModeTabs;
-
-import org.qiuyeqaq.gtlcore_ceu.common.item.GTLCEuItems;
+import org.qiuyeqaq.gtlcore_ceu.common.data.*;
 import org.qiuyeqaq.gtlcore_ceu.config.ConfigHolder;
 import org.qiuyeqaq.gtlcore_ceu.integration.ae2.InfinityCellGuiHandler;
 import org.qiuyeqaq.gtlcore_ceu.integration.ae2.storage.InfinityCellHandler;
@@ -12,7 +10,11 @@ import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialEvent;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialRegistryEvent;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.PostMaterialEvent;
+import com.gregtechceu.gtceu.api.machine.MachineDefinition;
+import com.gregtechceu.gtceu.api.recipe.GTRecipeType;
+import com.gregtechceu.gtceu.api.recipe.condition.RecipeConditionType;
 
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;

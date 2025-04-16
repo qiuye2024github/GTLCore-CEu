@@ -2,7 +2,7 @@ package org.qiuyeqaq.gtlcore_ceu;
 
 import org.qiuyeqaq.gtlcore_ceu.api.registries.GTLCEuRegistration;
 import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuBedrockFluids;
-import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuItems;
+import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuBlocks;
 
 import com.gregtechceu.gtceu.api.addon.IGTAddon;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
@@ -14,10 +14,11 @@ import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.resources.ResourceLocation;
 
 import com.lowdragmc.lowdraglib.Platform;
+import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuItems;
 
 import java.util.function.Consumer;
 
-public class GTLCEuAddon implements IGTAddon {
+public class GTLCEuGTAddon implements IGTAddon {
 
     @Override
     public String addonModId() {
@@ -37,6 +38,7 @@ public class GTLCEuAddon implements IGTAddon {
     @Override
     public void initializeAddon() {
         GTLCEuItems.init();
+        GTLCEuBlocks.init();
     }
 
     @Override

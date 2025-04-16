@@ -1,7 +1,5 @@
 package org.qiuyeqaq.gtlcore_ceu.common.item;
 
-import org.qiuyeqaq.gtlcore_ceu.client.renderer.BlockHighlightHandler;
-
 import com.gregtechceu.gtceu.api.item.component.IInteractionItem;
 import com.gregtechceu.gtceu.api.item.tool.behavior.IToolBehavior;
 import com.gregtechceu.gtceu.api.machine.MetaMachine;
@@ -25,6 +23,7 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 
 import org.jetbrains.annotations.NotNull;
+import org.qiuyeqaq.gtlcore_ceu.client.renderer.BlockHighlightHandler;
 
 import java.util.ArrayList;
 import java.util.List;

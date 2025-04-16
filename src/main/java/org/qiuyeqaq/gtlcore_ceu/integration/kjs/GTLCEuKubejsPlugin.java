@@ -1,5 +1,6 @@
 package org.qiuyeqaq.gtlcore_ceu.integration.kjs;
 
+import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuItems;
 import org.qiuyeqaq.gtlcore_ceu.utils.Registries;
 import org.qiuyeqaq.gtlcore_ceu.utils.TextUtil;
 
@@ -20,6 +21,7 @@ public class GTLCEuKubejsPlugin extends KubeJSPlugin {
     public void registerBindings(BindingsEvent event) {
         super.registerBindings(event);
 
+        event.add("GTLCEuItems", GTLCEuItems.class);
         event.add("TextUtil", TextUtil.class);
         event.add("Registries", Registries.class);
     }

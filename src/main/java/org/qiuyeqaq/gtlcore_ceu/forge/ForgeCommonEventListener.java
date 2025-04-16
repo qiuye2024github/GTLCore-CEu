@@ -1,5 +1,12 @@
 package org.qiuyeqaq.gtlcore_ceu.forge;
 
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.fml.LogicalSide;
 import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
 
 import net.minecraft.core.registries.Registries;
@@ -12,6 +19,9 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.MissingMappingsEvent;
 
 import dev.latvian.mods.kubejs.KubeJS;
+import org.qiuyeqaq.gtlcore_ceu.config.ConfigHolder;
+
+import java.util.Objects;
 
 @Mod.EventBusSubscriber(modid = GTLCore_CEu.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ForgeCommonEventListener {
@@ -34,8 +44,16 @@ public class ForgeCommonEventListener {
     }
 
     @SubscribeEvent
+    public static void onPlayerTickEvent(TickEvent.PlayerTickEvent event) {
+        if (ConfigHolder.INSTANCE.disableDrift && event.phase == TickEvent.Phase.END &&
+                event.side == LogicalSide.CLIENT && event.player.xxa == 0 && event.player.zza == 0) {
+            event.player.setDeltaMovement(event.player.getDeltaMovement().multiply(0.5, 1, 0.5));
+        }
+    }
+
+    @SubscribeEvent
     public static void remapIds(MissingMappingsEvent event) {
-        event.getMappings(Registries.BLOCK, KubeJS.MOD_ID).forEach(mapping -> {});
-        event.getMappings(Registries.ITEM, "infinitycells").forEach(mapping -> {});
+        event.getMappings(Registries.BLOCK, KubeJS.MOD_ID).forEach(mapping -> {
+        });
     }
 }
