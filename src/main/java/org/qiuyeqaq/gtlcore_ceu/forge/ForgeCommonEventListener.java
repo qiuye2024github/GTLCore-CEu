@@ -19,6 +19,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.MissingMappingsEvent;
 
 import dev.latvian.mods.kubejs.KubeJS;
+import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuItems;
 import org.qiuyeqaq.gtlcore_ceu.config.ConfigHolder;
 
 import java.util.Objects;
@@ -54,6 +55,14 @@ public class ForgeCommonEventListener {
     @SubscribeEvent
     public static void remapIds(MissingMappingsEvent event) {
         event.getMappings(Registries.BLOCK, KubeJS.MOD_ID).forEach(mapping -> {
+        });
+        event.getMappings(Registries.ITEM, "infinitycells").forEach(mapping -> {
+            if (mapping.getKey().equals(new ResourceLocation("infinitycells:infinity_cell"))) {
+                mapping.remap(GTLCEuItems.ITEM_INFINITY_CELL.get());
+            }
+            if (mapping.getKey().equals(new ResourceLocation("infinitycells:infinity_fluid_cell"))) {
+                mapping.remap(GTLCEuItems.FLUID_INFINITY_CELL.get());
+            }
         });
     }
 }
