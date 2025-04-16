@@ -1,6 +1,10 @@
 package org.qiuyeqaq.gtlcore_ceu.common.data;
 
+import com.gregtechceu.gtceu.api.block.IFusionCasingType;
+import com.gregtechceu.gtceu.common.block.FusionCasingBlock;
+import net.minecraftforge.client.model.generators.ModelFile;
 import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
+import org.qiuyeqaq.gtlcore_ceu.common.block.CleanroomFilterType;
 import org.qiuyeqaq.gtlcore_ceu.common.block.CraftingUnitType;
 
 import com.gregtechceu.gtceu.api.GTCEuAPI;
@@ -37,6 +41,7 @@ import com.tterrag.registrate.util.nullness.NonNullFunction;
 import com.tterrag.registrate.util.nullness.NonNullSupplier;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.qiuyeqaq.gtlcore_ceu.common.block.GTLCEuFusionCasingBlock;
 
 import java.util.HashMap;
 import java.util.List;
@@ -44,9 +49,11 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.function.Supplier;
 
+import static com.gregtechceu.gtceu.common.data.GTBlocks.ALL_FUSION_CASINGS;
 import static org.qiuyeqaq.gtlcore_ceu.api.registries.GTLCEuRegistration.REGISTRATE;
 
 public class GTLCEuBlocks {
+
     public static Map<Integer, Supplier<Block>> scmap = new HashMap<>();
     public static Map<Integer, Supplier<ActiveBlock>> sepmmap = new HashMap<>();
     public static Map<Integer, Supplier<Block>> calmap = new HashMap<>();
@@ -136,12 +143,12 @@ public class GTLCEuBlocks {
                                                       Map<Integer, Supplier<Block>> map, int tier) {
         BlockEntry<Block> Block = REGISTRATE.block(name, p -> (Block) new Block(p) {
 
-            @Override
-            public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter level,
-                                        @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
-                tooltip.add(Component.translatable("gtceu.casings.tier", tier));
-            }
-        })
+                    @Override
+                    public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter level,
+                                                @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
+                        tooltip.add(Component.translatable("gtceu.casings.tier", tier));
+                    }
+                })
                 .initialProperties(() -> Blocks.IRON_BLOCK)
                 .properties(p -> p.isValidSpawn((state, level, pos, ent) -> false))
                 .addLayer(() -> RenderType::cutoutMipped)
@@ -160,12 +167,12 @@ public class GTLCEuBlocks {
                                                                  Map<Integer, Supplier<ActiveBlock>> map, int tier) {
         BlockEntry<ActiveBlock> Block = REGISTRATE.block("%s".formatted(name), p -> (ActiveBlock) new ActiveBlock(p) {
 
-            @Override
-            public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter level,
-                                        @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
-                tooltip.add(Component.translatable("gtceu.casings.tier", tier));
-            }
-        })
+                    @Override
+                    public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter level,
+                                                @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
+                        tooltip.add(Component.translatable("gtceu.casings.tier", tier));
+                    }
+                })
                 .initialProperties(() -> Blocks.IRON_BLOCK)
                 .addLayer(() -> RenderType::cutoutMipped)
                 .blockstate(GTModels.createActiveModel(GTLCore_CEu.id(baseModelPath)))
@@ -223,6 +230,27 @@ public class GTLCEuBlocks {
     }
 
     @SuppressWarnings("all")
+    private static BlockEntry<FusionCasingBlock> createFusionCasing(IFusionCasingType casingType) {
+        BlockEntry<FusionCasingBlock> casingBlock = REGISTRATE
+                .block(casingType.getSerializedName(), p -> (FusionCasingBlock) new GTLCEuFusionCasingBlock(p, casingType))
+                .initialProperties(() -> Blocks.IRON_BLOCK)
+                .properties(properties -> properties.strength(5.0f, 10.0f).sound(SoundType.METAL))
+                .addLayer(() -> RenderType::cutoutMipped)
+                .blockstate((ctx, prov) -> {
+                    ActiveBlock block = ctx.getEntry();
+                    ModelFile inactive = prov.models().getExistingFile(GTLCore_CEu.id(casingType.getSerializedName()));
+                    ModelFile active = prov.models().getExistingFile(GTLCore_CEu.id(casingType.getSerializedName()).withSuffix("_active"));
+                    prov.getVariantBuilder(block).partialState().with(ActiveBlock.ACTIVE, false).modelForState().modelFile(inactive).addModel().partialState().with(ActiveBlock.ACTIVE, true).modelForState().modelFile(active).addModel();
+                })
+                .tag(GTToolType.WRENCH.harvestTags.get(0), CustomTags.TOOL_TIERS[casingType.getHarvestLevel()])
+                .item(BlockItem::new)
+                .build()
+                .register();
+        ALL_FUSION_CASINGS.put(casingType, casingBlock);
+        return casingBlock;
+    }
+
+    @SuppressWarnings("all")
     private static BlockEntry<Block> createHermeticCasing(int tier) {
         String tierName = GTValues.VN[tier].toLowerCase(Locale.ROOT);
         return REGISTRATE
@@ -243,6 +271,11 @@ public class GTLCEuBlocks {
     public static final BlockEntry<Block> HERMETIC_CASING_UXV = createHermeticCasing(GTValues.UXV);
     public static final BlockEntry<Block> HERMETIC_CASING_OpV = createHermeticCasing(GTValues.OpV);
 
+    public static final BlockEntry<FusionCasingBlock> FUSION_CASING_MK4 = createFusionCasing(
+            GTLCEuFusionCasingBlock.CasingType.FUSION_CASING_MK4);
+    public static final BlockEntry<FusionCasingBlock> FUSION_CASING_MK5 = createFusionCasing(
+            GTLCEuFusionCasingBlock.CasingType.FUSION_CASING_MK5);
+
     public static final BlockEntry<ActiveBlock> ADVANCED_FUSION_COIL = createActiveCasing("advanced_fusion_coil",
             "block/variant/advanced_fusion_coil");
     public static final BlockEntry<ActiveBlock> FUSION_COIL_MK2 = createActiveCasing("fusion_coil_mk2",
@@ -257,6 +290,9 @@ public class GTLCEuBlocks {
             "compressed_fusion_coil_mk2_prototype", "block/variant/compressed_fusion_coil_mk2_prototype");
     public static final BlockEntry<ActiveBlock> COMPRESSED_FUSION_COIL_MK2 = createActiveCasing(
             "compressed_fusion_coil_mk2", "block/variant/compressed_fusion_coil_mk2");
+
+    public static final BlockEntry<Block> FILTER_CASING_LAW = createCleanroomFilter(
+            CleanroomFilterType.FILTER_CASING_LAW);
 
     public static final BlockEntry<Block> CASING_SUPERCRITICAL_TURBINE = createCasingBlock(
             "supercritical_turbine_casing", GTLCore_CEu.id("block/supercritical_turbine_casing"));

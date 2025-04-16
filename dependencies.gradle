@@ -32,6 +32,8 @@ dependencies {
     modImplementation("dev.shadowsoffire:Placebo:${project.minecraft_version}-8.6.2")
 
     api(modImplementation("dev.latvian.mods:kubejs:$kubejs_version"))
+    modImplementation("dev.latvian.mods:kubejs:$kubejs_version")
+
     modImplementation("dev.latvian.mods:rhino-forge:${rhino_version}")
 
     modImplementation("curse.maven:jade-324717:6106101")

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "gtlcore_ceu:block/variant/improved_superconductor_coil"
+    },
+    "active=true": {
+      "model": "gtlcore_ceu:block/variant/improved_superconductor_coil_active"
+    }
+  }
+}

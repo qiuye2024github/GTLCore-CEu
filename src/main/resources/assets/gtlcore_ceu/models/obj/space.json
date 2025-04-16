@@ -1,0 +1,9 @@
+{
+  "loader": "forge:obj",
+  "flip_v": true,
+  "model": "gtlcore_ceu:models/obj/space.obj",
+  "textures": {
+    "texture0": "gtlcore_ceu:block/obj/space_layer",
+    "particle":"gtlcore_ceu:block/obj/space_layer"
+  }
+}

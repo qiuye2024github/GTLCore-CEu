@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gtlcore_ceu:block/graviton_field_constraint_casing"
+    }
+  }
+}

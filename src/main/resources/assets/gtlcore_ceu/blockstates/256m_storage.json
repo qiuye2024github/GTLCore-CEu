@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "formed=false": {
+      "model": "gtlcore_ceu:block/crafting/256m_storage"
+    },
+    "formed=true": {
+      "model": "gtlcore_ceu:block/crafting/256m_storage_formed"
+    }
+  }
+}

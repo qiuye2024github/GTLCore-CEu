@@ -1,5 +1,9 @@
 package org.qiuyeqaq.gtlcore_ceu.client;
 
+import appeng.client.render.crafting.CraftingCubeModel;
+import appeng.hooks.BuiltInModelHooks;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
 import org.qiuyeqaq.gtlcore_ceu.common.block.CraftingUnitType;
 
@@ -16,6 +20,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import appeng.client.render.crafting.AbstractCraftingUnitModelProvider;
 import appeng.client.render.crafting.LightBakedModel;
 import appeng.core.AppEng;
+import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuBlocks;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -87,9 +92,22 @@ public class CraftingUnitModelProvider extends AbstractCraftingUnitModelProvider
     }
 
     public static void initCraftingUnitModels() {
+        for (CraftingUnitType type : CraftingUnitType.values()) {
+            BuiltInModelHooks.addBuiltInModel(
+                    GTLCore_CEu.id("block/crafting/" + type.getAffix() + "_formed"),
+                    new CraftingCubeModel(new CraftingUnitModelProvider(type)));
+        }
+
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(CraftingUnitModelProvider::setRenderLayer);
     }
 
-    private static void setRenderLayer(FMLClientSetupEvent event) {}
+    private static void setRenderLayer(FMLClientSetupEvent event) {
+        ItemBlockRenderTypes.setRenderLayer(GTLCEuBlocks.CRAFTING_STORAGE_1M.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(GTLCEuBlocks.CRAFTING_STORAGE_4M.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(GTLCEuBlocks.CRAFTING_STORAGE_16M.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(GTLCEuBlocks.CRAFTING_STORAGE_64M.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(GTLCEuBlocks.CRAFTING_STORAGE_256M.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(GTLCEuBlocks.CRAFTING_STORAGE_MAX.get(), RenderType.cutout());
+    }
 }

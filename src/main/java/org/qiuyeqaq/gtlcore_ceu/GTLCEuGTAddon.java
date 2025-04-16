@@ -1,11 +1,9 @@
 package org.qiuyeqaq.gtlcore_ceu;
 
 import com.gregtechceu.gtceu.api.addon.GTAddon;
+import org.qiuyeqaq.gtlcore_ceu.api.data.tag.GTLCEuTagPrefix;
 import org.qiuyeqaq.gtlcore_ceu.api.registries.GTLCEuRegistration;
-import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuBedrockFluids;
-import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuBlocks;
-import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuCovers;
-import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuItems;
+import org.qiuyeqaq.gtlcore_ceu.common.data.*;
 
 import com.gregtechceu.gtceu.api.addon.IGTAddon;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
@@ -46,7 +44,7 @@ public class GTLCEuGTAddon implements IGTAddon {
 
     @Override
     public void registerSounds() {
-        //GTLCEuSoundEntries.init();
+        GTLCEuSoundEntries.init();
     }
 
     @Override
@@ -56,12 +54,12 @@ public class GTLCEuGTAddon implements IGTAddon {
 
     @Override
     public void registerElements() {
-        //GTLCEuElements.init();
+        GTLCEuElements.init();
     }
 
     @Override
     public void registerTagPrefixes() {
-        //GTLCEuTagPrefix.init();
+        GTLCEuTagPrefix.init();
     }
 
     @Override

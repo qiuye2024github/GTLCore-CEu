@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "gtlcore_ceu:block/variant/hyper_core"
+    },
+    "active=true": {
+      "model": "gtlcore_ceu:block/variant/hyper_core_active"
+    }
+  }
+}
