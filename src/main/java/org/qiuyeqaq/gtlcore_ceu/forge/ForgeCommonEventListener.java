@@ -1,27 +1,27 @@
 package org.qiuyeqaq.gtlcore_ceu.forge;
 
+import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
+import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuBlocks;
+import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuItems;
+import org.qiuyeqaq.gtlcore_ceu.config.ConfigHolder;
+
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.monster.EnderMan;
+import net.minecraft.world.entity.monster.Shulker;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.fml.LogicalSide;
-import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
-
-import net.minecraft.core.registries.Registries;
-import net.minecraft.world.entity.monster.EnderMan;
-import net.minecraft.world.entity.monster.Shulker;
 import net.minecraftforge.event.entity.EntityTeleportEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.LogicalSide;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.MissingMappingsEvent;
 
 import dev.latvian.mods.kubejs.KubeJS;
-import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuBlocks;
-import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuItems;
-import org.qiuyeqaq.gtlcore_ceu.config.ConfigHolder;
 
 import java.util.Objects;
 
@@ -38,7 +38,7 @@ public class ForgeCommonEventListener {
         if (event.getEntity().level().getBlockState(event.getPos()).getBlock() == Blocks.END_PORTAL_FRAME &&
                 event.getEntity().getItemInHand(event.getHand()).getItem() == Items.ENDER_EYE) {
             if (event.getEntity() instanceof ServerPlayer player &&
-                    Objects.equals(player.getOffhandItem(),"kubejs:end_data")) {
+                    Objects.equals(player.getOffhandItem(), "kubejs:end_data")) {
                 player.getOffhandItem().setCount(player.getOffhandItem().getCount() - 1);
                 return;
             }

@@ -1,13 +1,15 @@
 package org.qiuyeqaq.gtlcore_ceu.common.block;
 
+import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuBlocks;
+
+import net.minecraft.world.item.Item;
+
 import appeng.block.crafting.CraftingUnitBlock;
 import appeng.block.crafting.ICraftingUnitType;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import lombok.Getter;
-import net.minecraft.world.item.Item;
-import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuBlocks;
 
-public enum CraftingUnitType  implements ICraftingUnitType {
+public enum CraftingUnitType implements ICraftingUnitType {
 
     STORAGE_1M(1, "1m_storage"),
     STORAGE_4M(4, "4m_storage"),

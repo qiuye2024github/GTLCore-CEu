@@ -3,6 +3,7 @@ package org.qiuyeqaq.gtlcore_ceu;
 import org.qiuyeqaq.gtlcore_ceu.api.registries.GTLCEuRegistration;
 import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuBedrockFluids;
 import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuBlocks;
+import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuItems;
 
 import com.gregtechceu.gtceu.api.addon.IGTAddon;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
@@ -14,7 +15,6 @@ import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.resources.ResourceLocation;
 
 import com.lowdragmc.lowdraglib.Platform;
-import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuItems;
 
 import java.util.function.Consumer;
 

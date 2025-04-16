@@ -1,9 +1,8 @@
 package org.qiuyeqaq.gtlcore_ceu.common.data;
 
-import appeng.block.crafting.AbstractCraftingUnitBlock;
-import appeng.block.crafting.CraftingUnitBlock;
-import appeng.blockentity.AEBaseBlockEntity;
-import appeng.blockentity.crafting.CraftingBlockEntity;
+import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
+import org.qiuyeqaq.gtlcore_ceu.common.block.CraftingUnitType;
+
 import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.block.ActiveBlock;
@@ -11,11 +10,7 @@ import com.gregtechceu.gtceu.api.block.IFilterType;
 import com.gregtechceu.gtceu.api.item.tool.GTToolType;
 import com.gregtechceu.gtceu.common.data.GTModels;
 import com.gregtechceu.gtceu.data.recipe.CustomTags;
-import com.tterrag.registrate.util.entry.BlockEntityEntry;
-import com.tterrag.registrate.util.entry.BlockEntry;
-import com.tterrag.registrate.util.nullness.NonNullBiConsumer;
-import com.tterrag.registrate.util.nullness.NonNullFunction;
-import com.tterrag.registrate.util.nullness.NonNullSupplier;
+
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -30,10 +25,18 @@ import net.minecraft.world.level.block.GlassBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
+
+import appeng.block.crafting.AbstractCraftingUnitBlock;
+import appeng.block.crafting.CraftingUnitBlock;
+import appeng.blockentity.AEBaseBlockEntity;
+import appeng.blockentity.crafting.CraftingBlockEntity;
+import com.tterrag.registrate.util.entry.BlockEntityEntry;
+import com.tterrag.registrate.util.entry.BlockEntry;
+import com.tterrag.registrate.util.nullness.NonNullBiConsumer;
+import com.tterrag.registrate.util.nullness.NonNullFunction;
+import com.tterrag.registrate.util.nullness.NonNullSupplier;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.qiuyeqaq.gtlcore_ceu.common.block.CraftingUnitType;
-import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
 
 import java.util.HashMap;
 import java.util.List;
@@ -44,7 +47,6 @@ import java.util.function.Supplier;
 import static org.qiuyeqaq.gtlcore_ceu.api.registries.GTLCEuRegistration.REGISTRATE;
 
 public class GTLCEuBlocks {
-
     public static Map<Integer, Supplier<Block>> scmap = new HashMap<>();
     public static Map<Integer, Supplier<ActiveBlock>> sepmmap = new HashMap<>();
     public static Map<Integer, Supplier<Block>> calmap = new HashMap<>();
@@ -134,12 +136,12 @@ public class GTLCEuBlocks {
                                                       Map<Integer, Supplier<Block>> map, int tier) {
         BlockEntry<Block> Block = REGISTRATE.block(name, p -> (Block) new Block(p) {
 
-                    @Override
-                    public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter level,
-                                                @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
-                        tooltip.add(Component.translatable("gtceu.casings.tier", tier));
-                    }
-                })
+            @Override
+            public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter level,
+                                        @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
+                tooltip.add(Component.translatable("gtceu.casings.tier", tier));
+            }
+        })
                 .initialProperties(() -> Blocks.IRON_BLOCK)
                 .properties(p -> p.isValidSpawn((state, level, pos, ent) -> false))
                 .addLayer(() -> RenderType::cutoutMipped)
@@ -158,12 +160,12 @@ public class GTLCEuBlocks {
                                                                  Map<Integer, Supplier<ActiveBlock>> map, int tier) {
         BlockEntry<ActiveBlock> Block = REGISTRATE.block("%s".formatted(name), p -> (ActiveBlock) new ActiveBlock(p) {
 
-                    @Override
-                    public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter level,
-                                                @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
-                        tooltip.add(Component.translatable("gtceu.casings.tier", tier));
-                    }
-                })
+            @Override
+            public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter level,
+                                        @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
+                tooltip.add(Component.translatable("gtceu.casings.tier", tier));
+            }
+        })
                 .initialProperties(() -> Blocks.IRON_BLOCK)
                 .addLayer(() -> RenderType::cutoutMipped)
                 .blockstate(GTModels.createActiveModel(GTLCore_CEu.id(baseModelPath)))
@@ -219,7 +221,6 @@ public class GTLCEuBlocks {
                 .build()
                 .register();
     }
-
 
     @SuppressWarnings("all")
     private static BlockEntry<Block> createHermeticCasing(int tier) {

@@ -8,7 +8,10 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
             mod_authors             : mod_authors,
             mod_url                 : mod_url,
             mod_issue_tracker       : mod_issue_tracker,
-            gtceu_version           : gtceu_version
+            gtceu_version           : gtceu_version,
+            "ad_astra_version"      : ad_astra_version,
+            "kubejs_version"        : kubejs_version,
+            "jei_version"           : jei_version,
     ]
     inputs.properties replaceProperties
     expand replaceProperties
