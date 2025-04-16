@@ -1,21 +1,5 @@
 package org.qiuyeqaq.gtlcore_ceu.common.data;
 
-import org.qiuyeqaq.gtlcore_ceu.common.item.ConfigurationCopyBehavior;
-import org.qiuyeqaq.gtlcore_ceu.common.item.PatternModifier;
-import org.qiuyeqaq.gtlcore_ceu.common.item.StructureDetectBehavior;
-import org.qiuyeqaq.gtlcore_ceu.integration.ae2.InfinityCell;
-import org.qiuyeqaq.gtlcore_ceu.utils.TextUtil;
-
-import com.gregtechceu.gtceu.GTCEu;
-import com.gregtechceu.gtceu.api.GTValues;
-import com.gregtechceu.gtceu.api.item.ComponentItem;
-import com.gregtechceu.gtceu.api.item.component.ElectricStats;
-import com.gregtechceu.gtceu.common.data.GTItems;
-import com.gregtechceu.gtceu.common.item.TooltipBehavior;
-
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.Item;
-
 import appeng.api.stacks.AEKeyType;
 import appeng.api.upgrades.Upgrades;
 import appeng.core.definitions.AEItems;
@@ -27,12 +11,27 @@ import appeng.items.storage.BasicStorageCell;
 import appeng.items.storage.StorageTier;
 import appeng.items.tools.powered.PortableCellItem;
 import appeng.menu.me.common.MEStorageMenu;
+import com.gregtechceu.gtceu.GTCEu;
+import com.gregtechceu.gtceu.api.GTValues;
+import com.gregtechceu.gtceu.api.item.ComponentItem;
+import com.gregtechceu.gtceu.api.item.component.ElectricStats;
+import com.gregtechceu.gtceu.common.data.GTItems;
+import com.gregtechceu.gtceu.common.item.CoverPlaceBehavior;
+import com.gregtechceu.gtceu.common.item.TooltipBehavior;
+import com.hepdd.gtmthings.data.CreativeModeTabs;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import com.tterrag.registrate.util.nullness.NonNullBiConsumer;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.Item;
+import org.qiuyeqaq.gtlcore_ceu.common.item.*;
+import org.qiuyeqaq.gtlcore_ceu.integration.ae2.InfinityCell;
+import org.qiuyeqaq.gtlcore_ceu.utils.TextUtil;
 
 import java.util.List;
+import java.util.Locale;
 
 import static com.gregtechceu.gtceu.common.data.GTItems.*;
+import static com.hepdd.gtmthings.common.registry.GTMTRegistration.GTMTHINGS_REGISTRATE;
 import static org.qiuyeqaq.gtlcore_ceu.api.registries.GTLCEuRegistration.REGISTRATE;
 
 public class GTLCEuItems {
@@ -180,12 +179,88 @@ public class GTLCEuItems {
 
     public static ItemEntry<Item> ELECTRIC_MOTOR_MAX = REGISTRATE.item("max_electric_motor", Item::new).register();
 
+    public static ItemEntry<ComponentItem> ELECTRIC_PUMP_MAX = REGISTRATE
+            .item("max_electric_pump", ComponentItem::create)
+            .onRegister(attach(new CoverPlaceBehavior(GTLCEuCovers.ELECTRIC_PUMP_MAX)))
+            .onRegister(attach(new TooltipBehavior(lines -> {
+                lines.add(Component.translatable("item.gtceu.electric.pump.tooltip"));
+                lines.add(Component.translatable("gtceu.universal.tooltip.fluid_transfer_rate",
+                        1280 * 64 * 64 * 4 / 20));
+            })))
+            .register();
+
+    public static ItemEntry<ComponentItem> CONVEYOR_MODULE_MAX = REGISTRATE
+            .item("max_conveyor_module", ComponentItem::create)
+            .onRegister(attach(new CoverPlaceBehavior(GTLCEuCovers.CONVEYOR_MODULE_MAX)))
+            .onRegister(attach(new TooltipBehavior(lines -> {
+                lines.add(Component.translatable("item.gtceu.conveyor.module.tooltip"));
+                lines.add(Component.translatable("gtceu.universal.tooltip.item_transfer_rate_stacks", 16));
+            })))
+            .register();
+
+    public static ItemEntry<ComponentItem> ROBOT_ARM_MAX = REGISTRATE.item("max_robot_arm", ComponentItem::create)
+            .onRegister(attach(new CoverPlaceBehavior(GTLCEuCovers.ROBOT_ARM_MAX)))
+            .onRegister(attach(new TooltipBehavior(lines -> {
+                lines.add(Component.translatable("item.gtceu.robot.arm.tooltip"));
+                lines.add(Component.translatable("gtceu.universal.tooltip.item_transfer_rate_stacks", 16));
+            })))
+            .register();
+
+    public static ItemEntry<Item> ELECTRIC_PISTON_MAX = register("max_electric_piston", true);
+    public static ItemEntry<Item> FIELD_GENERATOR_MAX = register("max_field_generator", true);
+    public static ItemEntry<Item> EMITTER_MAX = register("max_emitter", true);
+    public static ItemEntry<Item> SENSOR_MAX = register("max_sensor", true);
+
+    public static ItemEntry<ComponentItem> PRIMITIVE_ROBOT_ARM = REGISTRATE
+            .item("primitive_robot_arm", ComponentItem::create)
+            .onRegister(attach(new CoverPlaceBehavior(GTLCEuCovers.ROBOT_ARM_ULV)))
+            .onRegister(attach(new TooltipBehavior(lines -> {
+                lines.add(Component.translatable("item.gtceu.robot.arm.tooltip"));
+                lines.add(Component.translatable("gtceu.universal.tooltip.item_transfer_rate_stacks", 33554431));
+            })))
+            .register();
+
+    public static ItemEntry<ComponentItem> PRIMITIVE_FLUID_REGULATOR = REGISTRATE
+            .item("primitive_fluid_regulator", ComponentItem::create)
+            .onRegister(attach(new CoverPlaceBehavior(GTLCEuCovers.FLUID_REGULATORS_ULV)))
+            .onRegister(attach(new TooltipBehavior(lines -> {
+                lines.add(Component.translatable("item.gtceu.fluid.regulator.tooltip"));
+                lines.add(Component.translatable("gtceu.universal.tooltip.fluid_transfer_rate", Integer.MAX_VALUE));
+            })))
+            .register();
+
+    private static ItemEntry<ComponentItem> registerTieredCover(int amperage) {
+        ItemEntry<ComponentItem> cover = GTMTHINGS_REGISTRATE
+                .item(GTValues.VN[GTValues.MAX].toLowerCase(Locale.ROOT) + "_" +
+                        (amperage == 1 ? "" : amperage + "a_") + "wireless_energy_receive_cover", ComponentItem::create)
+                .onRegister(attach(new TooltipBehavior(lines -> {
+                    lines.add(Component.translatable("item.gtmthings.wireless_energy_receive_cover.tooltip.1"));
+                    lines.add(Component.translatable("item.gtmthings.wireless_energy_receive_cover.tooltip.2"));
+                    lines.add(Component.translatable("item.gtmthings.wireless_energy_receive_cover.tooltip.3",
+                            GTValues.V[GTValues.MAX] * amperage));
+                }), new CoverPlaceBehavior(amperage == 1 ? GTLCEuCovers.MAX_WIRELESS_ENERGY_RECEIVE :
+                        GTLCEuCovers.MAX_WIRELESS_ENERGY_RECEIVE_4A)))
+                .register();
+        GTMTHINGS_REGISTRATE.setCreativeTab(cover, CreativeModeTabs.WIRELESS_TAB);
+        return cover;
+    }
+
+    public static ItemEntry<ComponentItem> WIRELESS_ENERGY_RECEIVE_COVER_MAX = registerTieredCover(1);
+
+    public static ItemEntry<ComponentItem> WIRELESS_ENERGY_RECEIVE_COVER_MAX_4A = registerTieredCover(4);
+
+    /*public static final ItemEntry<ComponentItem> DEBUG_PATTERN_TEST = REGISTRATE
+            .item("debug_pattern_test", ComponentItem::create)
+            .onRegister(GTItems.attach(PatternTestBehavior.INSTANCE))
+            .model(NonNullBiConsumer.noop())
+            .register();
+
     public static final ItemEntry<ComponentItem> PATTERN_MODIFIER = REGISTRATE
             .item("pattern_modifier", ComponentItem::create)
             .onRegister(GTItems.attach(PatternModifier.INSTANCE))
             .model(NonNullBiConsumer.noop())
             .register();
-
+*/
     public static ItemEntry<ComponentItem> CFG_COPY = REGISTRATE
             .item("cfg_copy", ComponentItem::create)
             .onRegister(attach(ConfigurationCopyBehavior.INSTANCE))

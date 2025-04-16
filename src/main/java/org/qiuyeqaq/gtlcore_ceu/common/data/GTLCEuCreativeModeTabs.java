@@ -12,7 +12,7 @@ public class GTLCEuCreativeModeTabs {
     public static RegistryEntry<CreativeModeTab> GTL_CORE_CEU = REGISTRATE.defaultCreativeTab(GTLCore_CEu.MOD_ID,
             builder -> builder.displayItems(new GTCreativeModeTabs.RegistrateDisplayItemsGenerator(GTLCore_CEu.MOD_ID, REGISTRATE))
                     .title(REGISTRATE.addLang("itemGroup", GTLCore_CEu.id("creative_tab"), "GTL Core"))
-                    .icon(GTLItems.MEGA_ULTIMATE_BATTERY::asStack)
+                    .icon(GTLCEuItems.MEGA_ULTIMATE_BATTERY::asStack)
                     .build())
             .register();
 

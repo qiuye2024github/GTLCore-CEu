@@ -1,8 +1,10 @@
 package org.qiuyeqaq.gtlcore_ceu;
 
+import com.gregtechceu.gtceu.api.addon.GTAddon;
 import org.qiuyeqaq.gtlcore_ceu.api.registries.GTLCEuRegistration;
 import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuBedrockFluids;
 import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuBlocks;
+import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuCovers;
 import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuItems;
 
 import com.gregtechceu.gtceu.api.addon.IGTAddon;
@@ -18,6 +20,7 @@ import com.lowdragmc.lowdraglib.Platform;
 
 import java.util.function.Consumer;
 
+@GTAddon
 public class GTLCEuGTAddon implements IGTAddon {
 
     @Override
@@ -42,26 +45,42 @@ public class GTLCEuGTAddon implements IGTAddon {
     }
 
     @Override
-    public void registerSounds() {}
+    public void registerSounds() {
+        //GTLCEuSoundEntries.init();
+    }
 
     @Override
-    public void registerCovers() {}
+    public void registerCovers() {
+        GTLCEuCovers.init();
+    }
 
     @Override
-    public void registerElements() {}
+    public void registerElements() {
+        //GTLCEuElements.init();
+    }
 
     @Override
-    public void registerTagPrefixes() {}
+    public void registerTagPrefixes() {
+        //GTLCEuTagPrefix.init();
+    }
 
     @Override
     public void addRecipes(Consumer<FinishedRecipe> provider) {
+        //GCyMRecipes.init(provider);
         FuelRecipes.init(provider);
+        //MachineRecipe.init(provider);
+        //Misc.init(provider);
+        //ElementCopying.init(provider);
+        //StoneDustProcess.init(provider);
+        //Lanthanidetreatment.init(provider);
         CircuitRecipes.init(provider);
         MixerRecipes.init(provider);
     }
 
     @Override
-    public void removeRecipes(Consumer<ResourceLocation> consumer) {}
+    public void removeRecipes(Consumer<ResourceLocation> consumer) {
+        //RemoveRecipe.init(consumer);
+    }
 
     @Override
     public void registerFluidVeins() {

@@ -1,10 +1,10 @@
 package org.qiuyeqaq.gtlcore_ceu.integration.kjs;
 
+import org.qiuyeqaq.gtlcore_ceu.api.item.tool.GTLCEuToolType;
 import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuBlocks;
 import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuItems;
 import org.qiuyeqaq.gtlcore_ceu.utils.Registries;
 import org.qiuyeqaq.gtlcore_ceu.utils.TextUtil;
-import org.qiuyeqaq.gtlcore_ceu.api.item.tool.GTLToolType;
 
 import dev.latvian.mods.kubejs.KubeJSPlugin;
 import dev.latvian.mods.kubejs.script.BindingsEvent;
@@ -25,7 +25,7 @@ public class GTLCEuKubejsPlugin extends KubeJSPlugin {
 
         event.add("GTLCEuBlocks", GTLCEuBlocks.class);
         event.add("GTLCEuItems", GTLCEuItems.class);
-        event.add("GTLToolType", GTLToolType.class);
+        event.add("GTLCEuToolType", GTLCEuToolType.class);
         event.add("TextUtil", TextUtil.class);
         event.add("Registries", Registries.class);
     }

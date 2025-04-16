@@ -68,7 +68,7 @@ public class ForgeCommonEventListener {
 
     @SubscribeEvent
     public static void remapIds(MissingMappingsEvent event) {
-        event.getMappings(Registries.BLOCK, KubeJS.MOD_ID).forEach(mapping -> {
+        /*event.getMappings(Registries.BLOCK, KubeJS.MOD_ID).forEach(mapping -> {
             if (mapping.getKey().equals(KubeJS.id("multi_functional_casing"))) {
                 mapping.remap(GTLCEuBlocks.MULTI_FUNCTIONAL_CASING.get());
             }
@@ -159,7 +159,7 @@ public class ForgeCommonEventListener {
             if (mapping.getKey().equals(KubeJS.id("hsss_reinforced_borosilicate_glass"))) {
                 mapping.remap(GTLCEuBlocks.HSSS_REINFORCED_BOROSILICATE_GLASS.get());
             }
-        });
+        });*/
         event.getMappings(Registries.ITEM, "infinitycells").forEach(mapping -> {
             if (mapping.getKey().equals(new ResourceLocation("infinitycells:infinity_cell"))) {
                 mapping.remap(GTLCEuItems.ITEM_INFINITY_CELL.get());
