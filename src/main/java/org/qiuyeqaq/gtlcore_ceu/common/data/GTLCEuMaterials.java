@@ -150,7 +150,7 @@ public class GTLCEuMaterials {
     public static Material TritiumHydride;
     public static Material DustyLiquidHeliumIII;
     public static Material Ozone;
-    public static Material HydrogenPeroxide;
+    public static Material HydrogenPeroxide_1;
     public static Material RareEarthChlorides;
 
     public static Material PentlanditeFront;

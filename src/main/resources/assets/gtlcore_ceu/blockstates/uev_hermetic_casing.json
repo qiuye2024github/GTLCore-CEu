@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gtlcore_ceu:block/uev_hermetic_casing"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "gtlcore_ceu:block/law_filter_casing"
+        }
+    }
+}

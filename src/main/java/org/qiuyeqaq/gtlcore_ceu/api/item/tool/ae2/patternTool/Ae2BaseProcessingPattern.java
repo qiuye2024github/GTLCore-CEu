@@ -73,7 +73,6 @@ public class Ae2BaseProcessingPattern {
     }
 
     public void setLore(Component component) {
-        this.patternStack = this.patternStack.kjs$withLore(new Component[] { component });
     }
 
     public ItemStack getPatternItemStack() {

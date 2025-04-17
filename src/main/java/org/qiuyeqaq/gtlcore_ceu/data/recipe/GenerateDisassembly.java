@@ -45,44 +45,5 @@ public class GenerateDisassembly {
         }
         ItemStack[] outputs = ItemRecipeCapability.CAP
                 .of(c.get(0).getContent()).getItems();
-        if (outputs.length == 0) return;
-        ItemStack output = outputs[0];
-        String id = output.kjs$getId();
-        boolean cal = r.recipeType == GTRecipeTypes.get("circuit_assembly_line");
-        if (isExcludeItems(id, outputItem)) return;
-        GTRecipeBuilder builder = DISASSEMBLY_RECIPES.recipeBuilder(new ResourceLocation(id))
-                .inputItems(output)
-                .duration(1)
-                .EUt(1);
-        if (DISASSEMBLY_RECORD.remove(id) && !cal) {
-            DISASSEMBLY_RECORD.add(id);
-        } else {
-            DISASSEMBLY_RECORD.add(id);
-            List<Content> itemList = r.input.getOrDefault(ItemRecipeCapability.CAP, null);
-            List<Content> fluidList = r.input.getOrDefault(FluidRecipeCapability.CAP, null);
-            if (itemList != null) {
-                itemList.forEach(content -> {
-                    ItemStack[] items = ItemRecipeCapability.CAP
-                            .of(content.getContent()).getItems();
-                    if (items.length == 0) return;
-                    ItemStack item = items[0];
-                    if (content.chance == ChanceLogic.getMaxChancedValue() && !item.isEmpty() && !item.hasTag()) {
-                        if (cal || !isExcludeItems(item.kjs$getId(), inputItem)) {
-                            builder.outputItems(item);
-                        }
-                    }
-                });
-            }
-            if (fluidList != null) {
-                fluidList.forEach(content -> {
-                    FluidIngredient fluid = FluidRecipeCapability.CAP
-                            .of(content.getContent());
-                    if (content.chance == ChanceLogic.getMaxChancedValue() && !fluid.isEmpty()) {
-                        builder.outputFluids(fluid);
-                    }
-                });
-            }
-        }
-        builder.save(p);
     }
 }

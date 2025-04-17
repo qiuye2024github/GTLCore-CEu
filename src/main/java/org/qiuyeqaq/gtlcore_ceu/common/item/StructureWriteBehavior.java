@@ -120,11 +120,6 @@ public class StructureWriteBehavior implements IItemUIFactory {
                 builder.append(".aisle(\"%s\")\n".formatted(Joiner.on("\", \"").join(strings)));
             }
             builder.append(".where(\"~\", Predicates.controller(Predicates.blocks(definition.get())))\n");
-            blockPattern.legend.forEach((b, c) -> {
-                if (c.equals(' ')) return;
-                builder.append(".where(\"").append(c).append("\", Predicates.blocks(Registries.getBlock(\"")
-                        .append(b.kjs$getId()).append("\")))\n");
-            });
             GTLCore_CEu.LOGGER.info(builder.toString());
         }
     }

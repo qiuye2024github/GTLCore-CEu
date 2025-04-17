@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gtlcore_ceu:block/opv_hermetic_casing"
+    }
+  }
+}

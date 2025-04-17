@@ -14,7 +14,6 @@ import org.qiuyeqaq.gtlcore_ceu.api.data.chemical.info.GTLCEuMaterialFlags;
 import org.qiuyeqaq.gtlcore_ceu.api.data.chemical.info.GTLCEuMaterialIconSet;
 import org.qiuyeqaq.gtlcore_ceu.api.item.tool.GTLCEuToolType;
 import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuElements;
-import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuMaterials;
 import org.qiuyeqaq.gtlcore_ceu.config.ConfigHolder;
 
 import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags.*;
@@ -5108,7 +5107,7 @@ public class MaterialBuilder {
                 .flags(DISABLE_DECOMPOSITION)
                 .buildAndRegister();
 
-        GTLCEuMaterials.HydrogenPeroxide = new Material.Builder(GTCEu.id("hydrogen_peroxide"))
+        HydrogenPeroxide_1 = new Material.Builder(GTCEu.id("hydrogen_peroxide_1"))
                 .fluid()
                 .components(Hydrogen, 2, Oxygen, 2)
                 .color(0xC8FFFF).iconSet(GTLCEuMaterialIconSet.LIMPID)
