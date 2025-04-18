@@ -1,8 +1,8 @@
 package org.qiuyeqaq.gtlcore_ceu.integration.jade.provider;
 
-import net.minecraft.network.chat.Component;
 import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
 import org.qiuyeqaq.gtlcore_ceu.api.capability.BindCapability;
+import org.qiuyeqaq.gtlcore_ceu.common.machine.multiblock.part.WirelessOpticalDataHatchMachine;
 
 import com.gregtechceu.gtceu.api.blockentity.MetaMachineBlockEntity;
 import com.gregtechceu.gtceu.integration.jade.provider.CapabilityBlockProvider;
@@ -10,12 +10,12 @@ import com.gregtechceu.gtceu.integration.jade.provider.CapabilityBlockProvider;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 
 import org.jetbrains.annotations.Nullable;
-import org.qiuyeqaq.gtlcore_ceu.common.machine.multiblock.part.WirelessOpticalDataHatchMachine;
 import snownee.jade.api.BlockAccessor;
 import snownee.jade.api.ITooltip;
 import snownee.jade.api.config.IPluginConfig;

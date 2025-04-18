@@ -1,13 +1,13 @@
 package org.qiuyeqaq.gtlcore_ceu.api.data.tag;
 
+import org.qiuyeqaq.gtlcore_ceu.api.data.chemical.info.GTLCEuMaterialFlags;
+
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconType;
 import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
-import org.qiuyeqaq.gtlcore_ceu.api.data.chemical.info.GTLCEuMaterialFlags;
 
 @SuppressWarnings("unused")
 public class GTLCEuTagPrefix {
-
 
     public static void init() {}
 

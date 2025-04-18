@@ -1,22 +1,16 @@
 package org.qiuyeqaq.gtlcore_ceu.data.recipe;
 
-import com.gregtechceu.gtceu.api.capability.recipe.FluidRecipeCapability;
-import com.gregtechceu.gtceu.api.capability.recipe.ItemRecipeCapability;
-import com.gregtechceu.gtceu.api.recipe.chance.logic.ChanceLogic;
-import com.gregtechceu.gtceu.api.recipe.content.Content;
-import com.gregtechceu.gtceu.api.recipe.ingredient.FluidIngredient;
-import com.gregtechceu.gtceu.common.data.GTRecipeTypes;
-import com.gregtechceu.gtceu.data.recipe.builder.GTRecipeBuilder;
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.ItemStack;
 import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
+
+import com.gregtechceu.gtceu.api.capability.recipe.ItemRecipeCapability;
+import com.gregtechceu.gtceu.api.recipe.content.Content;
+import com.gregtechceu.gtceu.data.recipe.builder.GTRecipeBuilder;
+
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.world.item.ItemStack;
 
 import java.util.List;
 import java.util.function.Consumer;
-
-import static org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuRecipeTypes.DISASSEMBLY_RECIPES;
-import static org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuRecipes.DISASSEMBLY_RECORD;
 
 public class GenerateDisassembly {
 

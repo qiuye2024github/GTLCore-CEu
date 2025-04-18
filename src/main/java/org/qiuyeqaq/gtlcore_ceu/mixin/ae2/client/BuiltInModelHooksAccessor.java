@@ -1,8 +1,9 @@
 package org.qiuyeqaq.gtlcore_ceu.mixin.ae2.client;
 
-import appeng.hooks.BuiltInModelHooks;
 import net.minecraft.client.resources.model.UnbakedModel;
 import net.minecraft.resources.ResourceLocation;
+
+import appeng.hooks.BuiltInModelHooks;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Accessor;
 

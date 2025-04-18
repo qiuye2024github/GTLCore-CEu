@@ -1,17 +1,17 @@
 package org.qiuyeqaq.gtlcore_ceu.common.data;
 
-import com.gregtechceu.gtceu.api.block.IFusionCasingType;
-import com.gregtechceu.gtceu.common.block.FusionCasingBlock;
-import net.minecraftforge.client.model.generators.ModelFile;
 import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
 import org.qiuyeqaq.gtlcore_ceu.common.block.CleanroomFilterType;
 import org.qiuyeqaq.gtlcore_ceu.common.block.CraftingUnitType;
+import org.qiuyeqaq.gtlcore_ceu.common.block.GTLCEuFusionCasingBlock;
 
 import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.block.ActiveBlock;
 import com.gregtechceu.gtceu.api.block.IFilterType;
+import com.gregtechceu.gtceu.api.block.IFusionCasingType;
 import com.gregtechceu.gtceu.api.item.tool.GTToolType;
+import com.gregtechceu.gtceu.common.block.FusionCasingBlock;
 import com.gregtechceu.gtceu.common.data.GTModels;
 import com.gregtechceu.gtceu.data.recipe.CustomTags;
 
@@ -29,6 +29,7 @@ import net.minecraft.world.level.block.GlassBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
+import net.minecraftforge.client.model.generators.ModelFile;
 
 import appeng.block.crafting.AbstractCraftingUnitBlock;
 import appeng.block.crafting.CraftingUnitBlock;
@@ -41,7 +42,6 @@ import com.tterrag.registrate.util.nullness.NonNullFunction;
 import com.tterrag.registrate.util.nullness.NonNullSupplier;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.qiuyeqaq.gtlcore_ceu.common.block.GTLCEuFusionCasingBlock;
 
 import java.util.HashMap;
 import java.util.List;
@@ -143,12 +143,12 @@ public class GTLCEuBlocks {
                                                       Map<Integer, Supplier<Block>> map, int tier) {
         BlockEntry<Block> Block = REGISTRATE.block(name, p -> (Block) new Block(p) {
 
-                    @Override
-                    public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter level,
-                                                @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
-                        tooltip.add(Component.translatable("gtceu.casings.tier", tier));
-                    }
-                })
+            @Override
+            public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter level,
+                                        @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
+                tooltip.add(Component.translatable("gtceu.casings.tier", tier));
+            }
+        })
                 .initialProperties(() -> Blocks.IRON_BLOCK)
                 .properties(p -> p.isValidSpawn((state, level, pos, ent) -> false))
                 .addLayer(() -> RenderType::cutoutMipped)
@@ -167,12 +167,12 @@ public class GTLCEuBlocks {
                                                                  Map<Integer, Supplier<ActiveBlock>> map, int tier) {
         BlockEntry<ActiveBlock> Block = REGISTRATE.block("%s".formatted(name), p -> (ActiveBlock) new ActiveBlock(p) {
 
-                    @Override
-                    public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter level,
-                                                @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
-                        tooltip.add(Component.translatable("gtceu.casings.tier", tier));
-                    }
-                })
+            @Override
+            public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter level,
+                                        @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
+                tooltip.add(Component.translatable("gtceu.casings.tier", tier));
+            }
+        })
                 .initialProperties(() -> Blocks.IRON_BLOCK)
                 .addLayer(() -> RenderType::cutoutMipped)
                 .blockstate(GTModels.createActiveModel(GTLCore_CEu.id(baseModelPath)))

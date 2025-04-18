@@ -1,13 +1,14 @@
 package org.qiuyeqaq.gtlcore_ceu.common.recipe;
 
+import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuMaterials;
+import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuRecipeTypes;
+import org.qiuyeqaq.gtlcore_ceu.data.recipe.GenerateDisassembly;
+
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.capability.recipe.FluidRecipeCapability;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
 import com.gregtechceu.gtceu.common.data.GTRecipeTypes;
 import com.gregtechceu.gtceu.data.recipe.builder.GTRecipeBuilder;
-import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuMaterials;
-import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuRecipeTypes;
-import org.qiuyeqaq.gtlcore_ceu.data.recipe.GenerateDisassembly;
 
 public class RecipeModify {
 

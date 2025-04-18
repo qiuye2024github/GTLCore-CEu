@@ -6,8 +6,7 @@ import static com.gregtechceu.gtceu.common.registry.GTRegistration.REGISTRATE;
 
 public class GTLCEuMachines {
 
-    public static void init() {
-    }
+    public static void init() {}
 
     static {
         REGISTRATE.creativeModeTab(() -> GTCreativeModeTabs.MACHINE);

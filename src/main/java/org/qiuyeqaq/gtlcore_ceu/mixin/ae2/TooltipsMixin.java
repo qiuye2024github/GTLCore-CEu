@@ -1,9 +1,11 @@
 package org.qiuyeqaq.gtlcore_ceu.mixin.ae2;
 
-import appeng.core.localization.Tooltips;
+import org.qiuyeqaq.gtlcore_ceu.utils.NumberUtils;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.MutableComponent;
-import org.qiuyeqaq.gtlcore_ceu.utils.NumberUtils;
+
+import appeng.core.localization.Tooltips;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

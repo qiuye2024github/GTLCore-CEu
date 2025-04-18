@@ -1,8 +1,10 @@
 package org.qiuyeqaq.gtlcore_ceu.client.gui;
 
-import appeng.client.gui.style.Blitter;
-import net.minecraft.resources.ResourceLocation;
 import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
+
+import net.minecraft.resources.ResourceLocation;
+
+import appeng.client.gui.style.Blitter;
 
 public enum ModifyIcon {
 

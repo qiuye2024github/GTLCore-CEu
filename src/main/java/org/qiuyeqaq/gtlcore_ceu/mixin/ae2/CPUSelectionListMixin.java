@@ -1,9 +1,10 @@
 package org.qiuyeqaq.gtlcore_ceu.mixin.ae2;
 
+import org.qiuyeqaq.gtlcore_ceu.utils.NumberUtils;
+
 import appeng.client.gui.ICompositeWidget;
 import appeng.client.gui.widgets.CPUSelectionList;
 import appeng.menu.me.crafting.CraftingStatusMenu;
-import org.qiuyeqaq.gtlcore_ceu.utils.NumberUtils;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

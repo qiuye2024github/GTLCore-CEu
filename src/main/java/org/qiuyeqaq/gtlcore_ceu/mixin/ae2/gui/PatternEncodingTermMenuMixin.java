@@ -1,5 +1,10 @@
 package org.qiuyeqaq.gtlcore_ceu.mixin.ae2.gui;
 
+import org.qiuyeqaq.gtlcore_ceu.client.gui.PatterEncodingTermMenuModify;
+
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.inventory.MenuType;
+
 import appeng.api.stacks.GenericStack;
 import appeng.api.storage.ITerminalHost;
 import appeng.helpers.IMenuCraftingPacket;
@@ -7,9 +12,6 @@ import appeng.helpers.IPatternTerminalMenuHost;
 import appeng.menu.me.common.MEStorageMenu;
 import appeng.menu.me.items.PatternEncodingTermMenu;
 import appeng.util.ConfigInventory;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.inventory.MenuType;
-import org.qiuyeqaq.gtlcore_ceu.client.gui.PatterEncodingTermMenuModify;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;

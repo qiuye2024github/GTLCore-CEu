@@ -1,5 +1,7 @@
 package org.qiuyeqaq.gtlcore_ceu.common.data;
 
+import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
+
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.cover.CoverDefinition;
 import com.gregtechceu.gtceu.client.renderer.cover.*;
@@ -7,8 +9,8 @@ import com.gregtechceu.gtceu.common.cover.ConveyorCover;
 import com.gregtechceu.gtceu.common.cover.PumpCover;
 import com.gregtechceu.gtceu.common.cover.RobotArmCover;
 import com.gregtechceu.gtceu.common.data.GTCovers;
+
 import com.hepdd.gtmthings.common.cover.WirelessEnergyReceiveCover;
-import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
 
 import java.util.Locale;
 

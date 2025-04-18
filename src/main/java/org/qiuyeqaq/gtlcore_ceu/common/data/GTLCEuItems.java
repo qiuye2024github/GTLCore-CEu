@@ -1,5 +1,19 @@
 package org.qiuyeqaq.gtlcore_ceu.common.data;
 
+import org.qiuyeqaq.gtlcore_ceu.common.item.*;
+import org.qiuyeqaq.gtlcore_ceu.integration.ae2.InfinityCell;
+import org.qiuyeqaq.gtlcore_ceu.utils.TextUtil;
+
+import com.gregtechceu.gtceu.GTCEu;
+import com.gregtechceu.gtceu.api.GTValues;
+import com.gregtechceu.gtceu.api.item.ComponentItem;
+import com.gregtechceu.gtceu.api.item.component.ElectricStats;
+import com.gregtechceu.gtceu.common.item.CoverPlaceBehavior;
+import com.gregtechceu.gtceu.common.item.TooltipBehavior;
+
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.Item;
+
 import appeng.api.stacks.AEKeyType;
 import appeng.api.upgrades.Upgrades;
 import appeng.core.definitions.AEItems;
@@ -11,21 +25,9 @@ import appeng.items.storage.BasicStorageCell;
 import appeng.items.storage.StorageTier;
 import appeng.items.tools.powered.PortableCellItem;
 import appeng.menu.me.common.MEStorageMenu;
-import com.gregtechceu.gtceu.GTCEu;
-import com.gregtechceu.gtceu.api.GTValues;
-import com.gregtechceu.gtceu.api.item.ComponentItem;
-import com.gregtechceu.gtceu.api.item.component.ElectricStats;
-import com.gregtechceu.gtceu.common.data.GTItems;
-import com.gregtechceu.gtceu.common.item.CoverPlaceBehavior;
-import com.gregtechceu.gtceu.common.item.TooltipBehavior;
 import com.hepdd.gtmthings.data.CreativeModeTabs;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import com.tterrag.registrate.util.nullness.NonNullBiConsumer;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.Item;
-import org.qiuyeqaq.gtlcore_ceu.common.item.*;
-import org.qiuyeqaq.gtlcore_ceu.integration.ae2.InfinityCell;
-import org.qiuyeqaq.gtlcore_ceu.utils.TextUtil;
 
 import java.util.List;
 import java.util.Locale;
@@ -249,18 +251,19 @@ public class GTLCEuItems {
 
     public static ItemEntry<ComponentItem> WIRELESS_ENERGY_RECEIVE_COVER_MAX_4A = registerTieredCover(4);
 
-    /*public static final ItemEntry<ComponentItem> DEBUG_PATTERN_TEST = REGISTRATE
-            .item("debug_pattern_test", ComponentItem::create)
-            .onRegister(GTItems.attach(PatternTestBehavior.INSTANCE))
-            .model(NonNullBiConsumer.noop())
-            .register();
-
-    public static final ItemEntry<ComponentItem> PATTERN_MODIFIER = REGISTRATE
-            .item("pattern_modifier", ComponentItem::create)
-            .onRegister(GTItems.attach(PatternModifier.INSTANCE))
-            .model(NonNullBiConsumer.noop())
-            .register();
-*/
+    /*
+     * public static final ItemEntry<ComponentItem> DEBUG_PATTERN_TEST = REGISTRATE
+     * .item("debug_pattern_test", ComponentItem::create)
+     * .onRegister(GTItems.attach(PatternTestBehavior.INSTANCE))
+     * .model(NonNullBiConsumer.noop())
+     * .register();
+     * 
+     * public static final ItemEntry<ComponentItem> PATTERN_MODIFIER = REGISTRATE
+     * .item("pattern_modifier", ComponentItem::create)
+     * .onRegister(GTItems.attach(PatternModifier.INSTANCE))
+     * .model(NonNullBiConsumer.noop())
+     * .register();
+     */
     public static ItemEntry<ComponentItem> CFG_COPY = REGISTRATE
             .item("cfg_copy", ComponentItem::create)
             .onRegister(attach(ConfigurationCopyBehavior.INSTANCE))

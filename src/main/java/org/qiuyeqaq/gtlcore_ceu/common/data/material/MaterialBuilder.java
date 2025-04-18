@@ -1,5 +1,11 @@
 package org.qiuyeqaq.gtlcore_ceu.common.data.material;
 
+import org.qiuyeqaq.gtlcore_ceu.api.data.chemical.info.GTLCEuMaterialFlags;
+import org.qiuyeqaq.gtlcore_ceu.api.data.chemical.info.GTLCEuMaterialIconSet;
+import org.qiuyeqaq.gtlcore_ceu.api.item.tool.GTLCEuToolType;
+import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuElements;
+import org.qiuyeqaq.gtlcore_ceu.config.ConfigHolder;
+
 import com.gregtechceu.gtceu.GTCEu;
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
@@ -10,11 +16,6 @@ import com.gregtechceu.gtceu.api.fluids.attribute.FluidAttributes;
 import com.gregtechceu.gtceu.api.fluids.store.FluidStorageKeys;
 import com.gregtechceu.gtceu.api.item.tool.GTToolType;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
-import org.qiuyeqaq.gtlcore_ceu.api.data.chemical.info.GTLCEuMaterialFlags;
-import org.qiuyeqaq.gtlcore_ceu.api.data.chemical.info.GTLCEuMaterialIconSet;
-import org.qiuyeqaq.gtlcore_ceu.api.item.tool.GTLCEuToolType;
-import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuElements;
-import org.qiuyeqaq.gtlcore_ceu.config.ConfigHolder;
 
 import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags.*;
 import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet.*;
@@ -23,7 +24,7 @@ import static com.gregtechceu.gtceu.common.data.GTMaterials.*;
 import static org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuMaterials.*;
 
 public class MaterialBuilder {
-    
+
     public static void init() {
         BarnardaAir = new Material.Builder(GTCEu.id("barnarda_air"))
                 .gas()

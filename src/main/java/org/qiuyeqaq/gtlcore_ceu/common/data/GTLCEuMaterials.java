@@ -1,14 +1,16 @@
 package org.qiuyeqaq.gtlcore_ceu.common.data;
 
+import org.qiuyeqaq.gtlcore_ceu.common.data.material.MaterialAdd;
+import org.qiuyeqaq.gtlcore_ceu.common.data.material.MaterialBuilder;
+
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.OreProperty;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey;
 import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
+
 import com.lowdragmc.lowdraglib.Platform;
 import committee.nova.mods.avaritia.init.registry.ModBlocks;
 import committee.nova.mods.avaritia.init.registry.ModItems;
-import org.qiuyeqaq.gtlcore_ceu.common.data.material.MaterialAdd;
-import org.qiuyeqaq.gtlcore_ceu.common.data.material.MaterialBuilder;
 
 import static com.gregtechceu.gtceu.common.data.GTMaterials.*;
 import static com.gregtechceu.gtceu.common.data.GTMaterials.Bastnasite;

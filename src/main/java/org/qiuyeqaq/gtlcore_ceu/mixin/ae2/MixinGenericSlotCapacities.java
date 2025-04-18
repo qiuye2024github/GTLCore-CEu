@@ -19,7 +19,7 @@ public class MixinGenericSlotCapacities {
 
     @Inject(method = "<clinit>",
             at = @At(value = "INVOKE",
-                    target = "Lappeng/api/behaviors/GenericSlotCapacities;register(Lappeng/api/stacks/AEKeyType;Ljava/lang/Long;)V"),
+                     target = "Lappeng/api/behaviors/GenericSlotCapacities;register(Lappeng/api/stacks/AEKeyType;Ljava/lang/Long;)V"),
             remap = false)
     private static void clinitInj(CallbackInfo ci) {
         map.putIfAbsent(AEKeyType.items(), 2147483647L);

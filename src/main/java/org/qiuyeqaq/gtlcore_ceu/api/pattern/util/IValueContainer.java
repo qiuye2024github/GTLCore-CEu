@@ -1,6 +1,7 @@
 package org.qiuyeqaq.gtlcore_ceu.api.pattern.util;
 
 import net.minecraft.world.level.block.Block;
+
 import org.jetbrains.annotations.Nullable;
 
 public interface IValueContainer<T> {

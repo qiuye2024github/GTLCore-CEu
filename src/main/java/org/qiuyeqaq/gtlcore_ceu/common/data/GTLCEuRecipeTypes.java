@@ -1,5 +1,9 @@
 package org.qiuyeqaq.gtlcore_ceu.common.data;
 
+import org.qiuyeqaq.gtlcore_ceu.common.recipe.RecipeModify;
+import org.qiuyeqaq.gtlcore_ceu.config.ConfigHolder;
+import org.qiuyeqaq.gtlcore_ceu.data.recipe.GenerateDisassembly;
+
 import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.block.ICoilType;
@@ -11,17 +15,16 @@ import com.gregtechceu.gtceu.common.data.GTRecipeTypes;
 import com.gregtechceu.gtceu.common.data.GTSoundEntries;
 import com.gregtechceu.gtceu.utils.FormattingUtil;
 import com.gregtechceu.gtceu.utils.ResearchManager;
-import com.lowdragmc.lowdraglib.gui.texture.ProgressTexture;
-import com.lowdragmc.lowdraglib.gui.widget.SlotWidget;
-import com.lowdragmc.lowdraglib.utils.CycleItemStackHandler;
-import com.lowdragmc.lowdraglib.utils.LocalizationUtils;
+
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.item.ItemStack;
-import org.qiuyeqaq.gtlcore_ceu.common.recipe.RecipeModify;
-import org.qiuyeqaq.gtlcore_ceu.config.ConfigHolder;
-import org.qiuyeqaq.gtlcore_ceu.data.recipe.GenerateDisassembly;
+
+import com.lowdragmc.lowdraglib.gui.texture.ProgressTexture;
+import com.lowdragmc.lowdraglib.gui.widget.SlotWidget;
+import com.lowdragmc.lowdraglib.utils.CycleItemStackHandler;
+import com.lowdragmc.lowdraglib.utils.LocalizationUtils;
 
 import java.util.ArrayList;
 import java.util.List;

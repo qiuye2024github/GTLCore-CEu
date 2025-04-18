@@ -1,14 +1,17 @@
 package org.qiuyeqaq.gtlcore_ceu.mixin.gtm.gui;
 
+import org.qiuyeqaq.gtlcore_ceu.client.gui.IProspectingTextureMixin;
+
 import com.gregtechceu.gtceu.api.gui.texture.ProspectingTexture;
-import com.lowdragmc.lowdraglib.LDLib;
-import dev.ftb.mods.ftbchunks.api.FTBChunksAPI;
-import dev.ftb.mods.ftbchunks.net.TeleportFromMapPacket;
+
 import net.minecraft.client.renderer.texture.AbstractTexture;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
-import org.qiuyeqaq.gtlcore_ceu.client.gui.IProspectingTextureMixin;
+
+import com.lowdragmc.lowdraglib.LDLib;
+import dev.ftb.mods.ftbchunks.api.FTBChunksAPI;
+import dev.ftb.mods.ftbchunks.net.TeleportFromMapPacket;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;

@@ -8,7 +8,6 @@ import net.minecraft.tags.ItemTags;
 
 public class GTLCEuToolType {
 
-
     public static final GTToolType VAJRA = GTToolType.builder("vajra")
             .idFormat("%s_vajra")
             .toolTag(TagUtil.createItemTag("tools/wrenches", false))

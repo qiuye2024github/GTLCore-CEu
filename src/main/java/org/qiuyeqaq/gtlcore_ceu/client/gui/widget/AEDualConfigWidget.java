@@ -1,9 +1,16 @@
 package org.qiuyeqaq.gtlcore_ceu.client.gui.widget;
 
-import appeng.api.stacks.GenericStack;
+import org.qiuyeqaq.gtlcore_ceu.common.machine.multiblock.part.MEDualHatchStockPartMachine;
+
 import com.gregtechceu.gtceu.api.gui.GuiTextures;
 import com.gregtechceu.gtceu.integration.ae2.gui.widget.slot.AEConfigSlotWidget;
 import com.gregtechceu.gtceu.integration.ae2.slot.*;
+
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import appeng.api.stacks.GenericStack;
 import com.lowdragmc.lowdraglib.gui.util.ClickData;
 import com.lowdragmc.lowdraglib.gui.widget.ButtonWidget;
 import com.lowdragmc.lowdraglib.gui.widget.LabelWidget;
@@ -13,10 +20,6 @@ import com.lowdragmc.lowdraglib.utils.Position;
 import com.lowdragmc.lowdraglib.utils.Size;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import org.qiuyeqaq.gtlcore_ceu.common.machine.multiblock.part.MEDualHatchStockPartMachine;
 
 public class AEDualConfigWidget extends WidgetGroup {
 

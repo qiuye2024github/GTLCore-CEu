@@ -1,10 +1,12 @@
 package org.qiuyeqaq.gtlcore_ceu.mixin.ae2.client;
 
+import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
+
 import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.client.resources.model.UnbakedModel;
 import net.minecraft.resources.ResourceLocation;
-import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
+
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;

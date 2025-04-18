@@ -1,11 +1,13 @@
 package org.qiuyeqaq.gtlcore_ceu.api.gui;
 
 import com.gregtechceu.gtceu.api.gui.fancy.IFancyConfiguratorButton;
+
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.network.chat.Component;
+
 import com.lowdragmc.lowdraglib.gui.texture.IGuiTexture;
 import com.lowdragmc.lowdraglib.gui.util.ClickData;
 import com.lowdragmc.lowdraglib.gui.widget.Widget;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.network.chat.Component;
 
 import java.util.Collections;
 import java.util.List;

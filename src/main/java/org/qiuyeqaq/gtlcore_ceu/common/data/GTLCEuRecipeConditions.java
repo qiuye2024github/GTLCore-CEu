@@ -1,8 +1,9 @@
 package org.qiuyeqaq.gtlcore_ceu.common.data;
 
+import org.qiuyeqaq.gtlcore_ceu.common.recipe.condition.GravityCondition;
+
 import com.gregtechceu.gtceu.api.recipe.condition.RecipeConditionType;
 import com.gregtechceu.gtceu.api.registry.GTRegistries;
-import org.qiuyeqaq.gtlcore_ceu.common.recipe.condition.GravityCondition;
 
 public class GTLCEuRecipeConditions {
 

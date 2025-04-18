@@ -1,4 +1,3 @@
 package org.qiuyeqaq.gtlcore_ceu.utils;
 
-public class RecipeMultiOutputUtils {
-}
+public class RecipeMultiOutputUtils {}

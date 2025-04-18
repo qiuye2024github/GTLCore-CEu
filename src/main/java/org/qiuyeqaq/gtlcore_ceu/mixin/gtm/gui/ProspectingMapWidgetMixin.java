@@ -1,14 +1,16 @@
 package org.qiuyeqaq.gtlcore_ceu.mixin.gtm.gui;
 
+import org.qiuyeqaq.gtlcore_ceu.client.gui.IProspectingTextureMixin;
+
 import com.gregtechceu.gtceu.api.gui.GuiTextures;
 import com.gregtechceu.gtceu.api.gui.misc.ProspectorMode;
 import com.gregtechceu.gtceu.api.gui.texture.ProspectingTexture;
 import com.gregtechceu.gtceu.api.gui.widget.ProspectingMapWidget;
+
 import com.llamalad7.mixinextras.sugar.Local;
 import com.lowdragmc.lowdraglib.gui.widget.ImageWidget;
 import com.lowdragmc.lowdraglib.gui.widget.SearchComponentWidget;
 import com.lowdragmc.lowdraglib.gui.widget.WidgetGroup;
-import org.qiuyeqaq.gtlcore_ceu.client.gui.IProspectingTextureMixin;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -16,7 +18,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(ProspectingMapWidget.class)
-public abstract class ProspectingMapWidgetMixin  extends WidgetGroup implements SearchComponentWidget.IWidgetSearch<Object> {
+public abstract class ProspectingMapWidgetMixin extends WidgetGroup implements SearchComponentWidget.IWidgetSearch<Object> {
 
     @Shadow(remap = false)
     private ProspectingTexture texture;

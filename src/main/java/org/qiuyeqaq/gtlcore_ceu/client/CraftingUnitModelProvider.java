@@ -1,12 +1,11 @@
 package org.qiuyeqaq.gtlcore_ceu.client;
 
-import appeng.client.render.crafting.CraftingCubeModel;
-import appeng.hooks.BuiltInModelHooks;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import org.qiuyeqaq.gtlcore_ceu.GTLCore_CEu;
 import org.qiuyeqaq.gtlcore_ceu.common.block.CraftingUnitType;
+import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuBlocks;
 
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.client.resources.model.Material;
@@ -18,9 +17,10 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import appeng.client.render.crafting.AbstractCraftingUnitModelProvider;
+import appeng.client.render.crafting.CraftingCubeModel;
 import appeng.client.render.crafting.LightBakedModel;
 import appeng.core.AppEng;
-import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuBlocks;
+import appeng.hooks.BuiltInModelHooks;
 
 import java.util.ArrayList;
 import java.util.Collections;

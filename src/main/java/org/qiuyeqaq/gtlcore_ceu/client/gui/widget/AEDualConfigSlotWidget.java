@@ -1,19 +1,11 @@
 package org.qiuyeqaq.gtlcore_ceu.client.gui.widget;
 
-
 import com.gregtechceu.gtceu.api.gui.GuiTextures;
 import com.gregtechceu.gtceu.api.gui.misc.IGhostFluidTarget;
 import com.gregtechceu.gtceu.api.gui.misc.IGhostItemTarget;
 import com.gregtechceu.gtceu.api.gui.widget.PhantomFluidWidget;
 import com.gregtechceu.gtceu.integration.ae2.slot.IConfigurableSlot;
 import com.gregtechceu.gtceu.integration.ae2.utils.AEUtil;
-
-import com.lowdragmc.lowdraglib.gui.ingredient.Target;
-import com.lowdragmc.lowdraglib.gui.util.DrawerHelper;
-import com.lowdragmc.lowdraglib.gui.widget.Widget;
-import com.lowdragmc.lowdraglib.side.fluid.forge.FluidHelperImpl;
-import com.lowdragmc.lowdraglib.utils.Position;
-import com.lowdragmc.lowdraglib.utils.Size;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
@@ -25,16 +17,22 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.FluidUtil;
 
 import appeng.api.stacks.AEFluidKey;
 import appeng.api.stacks.AEItemKey;
 import appeng.api.stacks.AmountFormat;
 import appeng.api.stacks.GenericStack;
 import com.google.common.collect.Lists;
+import com.lowdragmc.lowdraglib.gui.ingredient.Target;
+import com.lowdragmc.lowdraglib.gui.util.DrawerHelper;
+import com.lowdragmc.lowdraglib.gui.widget.Widget;
+import com.lowdragmc.lowdraglib.side.fluid.forge.FluidHelperImpl;
+import com.lowdragmc.lowdraglib.utils.Position;
+import com.lowdragmc.lowdraglib.utils.Size;
 import com.mojang.blaze3d.systems.RenderSystem;
 import lombok.Setter;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.FluidUtil;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
@@ -43,7 +41,6 @@ import static com.lowdragmc.lowdraglib.gui.util.DrawerHelper.*;
 import static com.lowdragmc.lowdraglib.gui.widget.PhantomFluidWidget.drainFrom;
 
 public class AEDualConfigSlotWidget extends Widget implements IGhostItemTarget, IGhostFluidTarget {
-
 
     private final AEDualConfigWidget parentWidget;
     private final int index;

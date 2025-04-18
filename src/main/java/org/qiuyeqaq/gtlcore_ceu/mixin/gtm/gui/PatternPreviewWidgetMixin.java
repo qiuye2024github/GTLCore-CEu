@@ -1,6 +1,7 @@
 package org.qiuyeqaq.gtlcore_ceu.mixin.gtm.gui;
 
 import com.gregtechceu.gtceu.api.gui.widget.PatternPreviewWidget;
+
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.Constant;
 import org.spongepowered.asm.mixin.injection.ModifyConstant;

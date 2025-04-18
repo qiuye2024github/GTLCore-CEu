@@ -1,10 +1,12 @@
 package org.qiuyeqaq.gtlcore_ceu.common.block;
 
+import org.qiuyeqaq.gtlcore_ceu.api.machine.multiblock.GTLCEuCleanroomType;
+
 import com.gregtechceu.gtceu.api.block.IFilterType;
 import com.gregtechceu.gtceu.api.machine.multiblock.CleanroomType;
+
 import lombok.Getter;
 import org.jetbrains.annotations.NotNull;
-import org.qiuyeqaq.gtlcore_ceu.api.machine.multiblock.GTLCEuCleanroomType;
 
 public enum CleanroomFilterType implements IFilterType {
 

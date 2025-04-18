@@ -1,20 +1,21 @@
 package org.qiuyeqaq.gtlcore_ceu.common.recipe.condition;
 
-import com.google.gson.JsonObject;
+import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuRecipeConditions;
+
 import com.gregtechceu.gtceu.api.machine.trait.RecipeLogic;
 import com.gregtechceu.gtceu.api.recipe.GTRecipe;
 import com.gregtechceu.gtceu.api.recipe.RecipeCondition;
 import com.gregtechceu.gtceu.api.recipe.condition.RecipeConditionType;
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
-import lombok.NoArgsConstructor;
+
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.GsonHelper;
-import org.jetbrains.annotations.NotNull;
-import org.qiuyeqaq.gtlcore_ceu.common.data.GTLCEuRecipeConditions;
 
-import java.util.Objects;
+import com.google.gson.JsonObject;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
+import lombok.NoArgsConstructor;
+import org.jetbrains.annotations.NotNull;
 
 @NoArgsConstructor
 public class GravityCondition extends RecipeCondition {

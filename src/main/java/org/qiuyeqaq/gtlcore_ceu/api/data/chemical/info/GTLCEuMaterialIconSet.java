@@ -1,11 +1,13 @@
 package org.qiuyeqaq.gtlcore_ceu.api.data.chemical.info;
 
+import org.qiuyeqaq.gtlcore_ceu.client.renderer.item.StereoscopicItemRenderer;
+
 import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet;
 import com.gregtechceu.gtceu.api.item.component.ICustomRenderer;
+
 import lombok.Getter;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.qiuyeqaq.gtlcore_ceu.client.renderer.item.StereoscopicItemRenderer;
 
 @Getter
 public class GTLCEuMaterialIconSet extends com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet {

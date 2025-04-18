@@ -1,10 +1,12 @@
 package org.qiuyeqaq.gtlcore_ceu.mixin.ae2;
 
+import org.qiuyeqaq.gtlcore_ceu.config.ConfigHolder;
+
+import net.minecraft.world.item.ItemStack;
+
 import appeng.api.storage.cells.IBasicCellItem;
 import appeng.api.storage.cells.ISaveProvider;
 import appeng.me.cells.BasicCellInventory;
-import net.minecraft.world.item.ItemStack;
-import org.qiuyeqaq.gtlcore_ceu.config.ConfigHolder;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;

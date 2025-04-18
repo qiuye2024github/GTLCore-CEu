@@ -1,6 +1,7 @@
 package org.qiuyeqaq.gtlcore_ceu.utils;
 
 import com.gregtechceu.gtceu.GTCEu;
+
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;

@@ -23,6 +23,8 @@
     "extendedae.PartExPatternProviderMixin",
     "extendedae.TileExPatternProviderMixin",
     "ftbu.YouCantBreakAE2Mixin",
+    "gtm.fix.GTUtilMixin",
+    "gtm.fix.WorkableElectricMultiblockMachineMixin",
     "gtm.ftb.TeleportFromMapPacketMixin",
     "gtmt.HugeBusPartMachineMixin",
     "gtmt.WirelessEnergyReceiveCoverMixin",

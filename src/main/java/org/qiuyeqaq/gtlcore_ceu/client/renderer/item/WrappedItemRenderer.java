@@ -1,8 +1,5 @@
 package org.qiuyeqaq.gtlcore_ceu.client.renderer.item;
 
-import com.lowdragmc.lowdraglib.client.renderer.IItemRendererProvider;
-import com.lowdragmc.lowdraglib.client.renderer.IRenderer;
-import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.renderer.ItemModelShaper;
@@ -13,6 +10,10 @@ import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+
+import com.lowdragmc.lowdraglib.client.renderer.IItemRendererProvider;
+import com.lowdragmc.lowdraglib.client.renderer.IRenderer;
+import com.mojang.blaze3d.vertex.PoseStack;
 import org.jetbrains.annotations.Nullable;
 
 public abstract class WrappedItemRenderer implements IRenderer {
