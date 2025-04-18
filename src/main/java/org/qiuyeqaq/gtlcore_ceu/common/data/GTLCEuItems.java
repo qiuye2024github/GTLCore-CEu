@@ -1,5 +1,6 @@
 package org.qiuyeqaq.gtlcore_ceu.common.data;
 
+import com.gregtechceu.gtceu.common.data.GTItems;
 import org.qiuyeqaq.gtlcore_ceu.common.item.*;
 import org.qiuyeqaq.gtlcore_ceu.integration.ae2.InfinityCell;
 import org.qiuyeqaq.gtlcore_ceu.utils.TextUtil;
@@ -251,19 +252,24 @@ public class GTLCEuItems {
 
     public static ItemEntry<ComponentItem> WIRELESS_ENERGY_RECEIVE_COVER_MAX_4A = registerTieredCover(4);
 
-    /*
-     * public static final ItemEntry<ComponentItem> DEBUG_PATTERN_TEST = REGISTRATE
-     * .item("debug_pattern_test", ComponentItem::create)
-     * .onRegister(GTItems.attach(PatternTestBehavior.INSTANCE))
-     * .model(NonNullBiConsumer.noop())
-     * .register();
-     * 
-     * public static final ItemEntry<ComponentItem> PATTERN_MODIFIER = REGISTRATE
-     * .item("pattern_modifier", ComponentItem::create)
-     * .onRegister(GTItems.attach(PatternModifier.INSTANCE))
-     * .model(NonNullBiConsumer.noop())
-     * .register();
-     */
+    public static final ItemEntry<ComponentItem> DEBUG_STRUCTURE_WRITER = REGISTRATE
+            .item("debug_structure_writer", ComponentItem::create)
+            .onRegister(GTItems.attach(StructureWriteBehavior.INSTANCE))
+            .model(NonNullBiConsumer.noop())
+            .register();
+
+    public static final ItemEntry<ComponentItem> DEBUG_PATTERN_TEST = REGISTRATE
+            .item("debug_pattern_test", ComponentItem::create)
+            .onRegister(GTItems.attach(PatternTestBehavior.INSTANCE))
+            .model(NonNullBiConsumer.noop())
+            .register();
+
+    public static final ItemEntry<ComponentItem> PATTERN_MODIFIER = REGISTRATE
+            .item("pattern_modifier", ComponentItem::create)
+            .onRegister(GTItems.attach(PatternModifier.INSTANCE))
+            .model(NonNullBiConsumer.noop())
+            .register();
+
     public static ItemEntry<ComponentItem> CFG_COPY = REGISTRATE
             .item("cfg_copy", ComponentItem::create)
             .onRegister(attach(ConfigurationCopyBehavior.INSTANCE))
