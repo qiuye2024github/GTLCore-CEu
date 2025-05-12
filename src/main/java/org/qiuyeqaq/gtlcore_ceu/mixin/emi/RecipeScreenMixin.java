@@ -91,12 +91,10 @@ public abstract class RecipeScreenMixin extends Screen {
      * 获取工作站的边界。
      *
      * @param i 工作站的索引，如果为 -1，则默认为 0。
-     * @return 根据配置和索引返回工作站的边界。
-     *
-     * @author .
-     * @qiuyeqaq .
-     *
+     * @return  根据配置和索引返回工作站的边界。
      * @reason 修复获取工作站边界时的偏移量计算错误
+     *
+     * @author qiuyeqaq
      */
     @Overwrite(remap = false)
     public Bounds getWorkstationBounds(int i) {

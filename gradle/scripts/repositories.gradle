@@ -32,12 +32,6 @@ repositories {
         url "https://maven.architectury.dev/"
     }
     maven {
-        url "https://maven.saps.dev/releases/"
-        content {
-            includeGroup "dev.latvian.mods"
-        }
-    }
-    maven {
         url "https://maven.ftb.dev/releases"
         content {
             includeGroup("dev.ftb.mods")
@@ -82,7 +76,6 @@ repositories {
             includeGroup "dev.latvian.apps"
         }
     }
-
     maven {
         url 'https://jitpack.io'
         content {

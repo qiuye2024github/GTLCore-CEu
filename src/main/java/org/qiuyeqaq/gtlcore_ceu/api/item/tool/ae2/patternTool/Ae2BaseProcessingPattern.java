@@ -20,18 +20,18 @@ import java.util.Objects;
 
 public class Ae2BaseProcessingPattern {
 
-    public ItemStack patternStack; // 样板itemStack
-    public int scale; // scale是此样板相对于配方的倍数，不能乱改！！！
-    public ServerPlayer serverPlayer;
+    private ItemStack patternStack; // 样板itemStack
+    private final ServerPlayer serverPlayer;
     /**
      * 此处一个对象就是一个样板，因此过滤器决定某些物品/流体会不会在此样板中出现
      */
-    public List<Item> DefaultBlackItem = new ArrayList<>(List.of(
+    private final List<Item> DefaultBlackItem = new ArrayList<>(List.of(
             GTItems.PROGRAMMED_CIRCUIT.asItem()));
 
     public void setDefaultFilter() {
         // 解码，转换为list方便操作
         AEProcessingPattern aeProcessingPattern = Ae2BaseProcessingPatternHelper.decodeToAEProcessingPattern(patternStack, serverPlayer);
+        if (aeProcessingPattern == null) return;
         List<GenericStack> inputGenericStacks = Ae2BaseProcessingPatternHelper.transGenericStackArrayToList(aeProcessingPattern.getSparseInputs());
         List<GenericStack> outputGenericStacks = Ae2BaseProcessingPatternHelper.transGenericStackArrayToList(aeProcessingPattern.getSparseOutputs());
 
@@ -44,9 +44,9 @@ public class Ae2BaseProcessingPattern {
                 Ae2BaseProcessingPatternHelper.transGenericStackListToArray(outputGenericStacks));
     }
 
-    public void useSetScale(int newScale, boolean div, long maxItemStack, long maxFluidStack) {
+    private void useSetScale(int newScale, boolean div, long maxItemStack, long maxFluidStack) {
         try {
-            ItemStack oldPatternStack = this.patternStack;
+            ItemStack oldPatternStack = patternStack;
             ItemStack newPatternStack;
             // 乘或除到新的份数
             newPatternStack = Ae2BaseProcessingPatternHelper.multiplyScale(
@@ -56,7 +56,7 @@ public class Ae2BaseProcessingPattern {
                     maxItemStack,
                     maxFluidStack);
             if (newPatternStack != null && !newPatternStack.isEmpty()) {
-                this.patternStack = newPatternStack;
+                patternStack = newPatternStack;
             }
         } catch (Exception e) {
             GTLCore_CEu.LOGGER.error(e.getMessage());
@@ -75,10 +75,8 @@ public class Ae2BaseProcessingPattern {
         useSetScale(newScale, div, maxItemStack, maxFluidStack);
     }
 
-    public void setLore(Component component) {}
-
     public ItemStack getPatternItemStack() {
-        return this.patternStack;
+        return patternStack;
     }
 
     public Ae2BaseProcessingPattern(ItemStack patternStack,
@@ -92,12 +90,12 @@ public class Ae2BaseProcessingPattern {
         try {
             for (ItemEntry<Item> shapeMold : GTItems.SHAPE_MOLDS) {
                 if (shapeMold != null) {
-                    this.DefaultBlackItem.add(shapeMold.asItem());
+                    DefaultBlackItem.add(shapeMold.asItem());
                 }
             }
             for (ItemEntry<Item> shapeMold : GTItems.SHAPE_EXTRUDERS) {
                 if (shapeMold != null) {
-                    this.DefaultBlackItem.add(shapeMold.asItem());
+                    DefaultBlackItem.add(shapeMold.asItem());
                 }
             }
         } catch (Exception e) {

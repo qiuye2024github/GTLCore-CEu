@@ -145,6 +145,7 @@
   "item.gtlcore_ceu.structure_detect.tooltip.0": "潜行右键多方快结构主方块即可",
   "item.gtlcore_ceu.structure_detect.tooltip.1": "检测大型结构时可能会出现卡顿",
   "itemGroup.gtlcore_ceu.creative_tab": "GTL Core - CEu",
+  "itemGroup.gtlcore_ceu.machines_item": "GTL Core - CEu machines",
   "gtlcore_ceu.machine.me_dual_hatch_stock.turns.0": "自动拉取已禁用",
   "gtlcore_ceu.machine.me_dual_hatch_stock.turns.1": "拉取流体/物品",
   "gtlcore_ceu.machine.me_dual_hatch_stock.turns.2": "仅拉取物品",

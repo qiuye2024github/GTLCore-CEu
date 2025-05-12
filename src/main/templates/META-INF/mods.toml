@@ -26,6 +26,13 @@ ordering = "AFTER"
 side = "BOTH"
 
 [[dependencies.${mod_id}]]
+modId = "kubejs"
+mandatory = false
+versionRange = "[${kubejs_version},)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
 modId = "extendedae"
 mandatory = false
 versionRange = "[1.1,)"
